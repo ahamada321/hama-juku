@@ -3,7 +3,7 @@ const cursorElement = document.getElementById("cursor");
 const words = [
   "基礎コースを学ぶ",
   "勝つための環境整備",
-  "投資家マインドを育む",
+  "投資マインドを育む",
   "実践スキルを磨く",
   "規律を整える",
   "喜びを分かち合う",
