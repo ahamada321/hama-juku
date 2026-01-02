@@ -1,0 +1,24 @@
+---
+import Layout from '@src/layouts/Layout.astro';
+
+// Import
+import HeadingPage from '@src/components/HeadingPage.astro';
+import CTA from '@components/CTA.astro';
+import ReviewsSection from '@components/ReviewsSection.astro';
+import FaqSection from '@components/FaqSection.astro';
+---
+
+<Layout title="ハマ塾フル版 (完全版) | ハマ塾">
+  <HeadingPage
+    title="ハマ塾フル版 (完全版)"
+    description="すべての教材と、毎日の過去チャート分析動画が届きます。日報＋フィードバックで、自然と実力が身につきます。"
+  />
+  <CTA
+    title="申し込み完了しました！"
+    description="内容を確認のうえ、追ってご返信いたします。３営業日を過ぎても返信がない場合は、お手数ですが迷惑メールフォルダをご確認のうえ、再度お問い合わせください。"
+    ctaText="トップページへ戻る"
+    ctaLink="/"
+  />
+  <ReviewsSection />
+  <FaqSection />
+</Layout>

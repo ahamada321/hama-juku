@@ -7,7 +7,7 @@ import ServicesSection from '@components/ServicesSection.astro';
 import AboutSection from '@components/AboutSection.astro';
 import PortfolioSection from '@components/PortfolioSection.astro';
 import ReviewsSection from '@components/ReviewsSection.astro';
-import ContactSection from '@components/ContactSection.astro';
+import CTA from '@components/CTA.astro';
 import FaqSection from '@components/FaqSection.astro';
 ---
 
@@ -17,6 +17,11 @@ import FaqSection from '@components/FaqSection.astro';
   <AboutSection />
   <PortfolioSection />
   <ReviewsSection />
-  <ContactSection />
+  <CTA
+    title="ハマ塾フル版 (完全版)"
+    description="断片的な知識を一つの戦略にまとめよう。 最短で突き抜けるなら【フル版】"
+    ctaText="詳細動画を見る"
+    ctaLink="/master"
+  />
   <FaqSection />
 </Layout>
