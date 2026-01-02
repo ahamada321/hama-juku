@@ -1,0 +1,68 @@
+---
+import SocialLinks from './SocialLinks.astro';
+
+// interface
+export interface FooterProps {
+  logoSrc: string;
+  brandName: string;
+  description: string;
+  description2: string;
+  socialLinks: { platform: string; url: string }[];
+  navigationLinks: { label: string; href: string }[];
+  copyright: string;
+}
+
+
+// Data footer
+const footerData: FooterProps = {
+  logoSrc: '/img/logo-light.png',
+  brandName: 'ハマ塾',
+  description: '運で勝つ投資は卒業しよう。',
+  description2: '根拠と統計で「勝てるべくして勝てている状態」をハマ塾で目指そう。',
+  socialLinks: [],
+  navigationLinks: [
+    /*{ label: 'ブログ記事', href: '/blog' },*/
+    { label: 'お問い合わせ', href: '/contact' },
+    { label: '特定商取引法に基づく表記', href: '/docs' },
+
+  ],
+  copyright: `© ${new Date().getFullYear()} ハマ塾 | All rights reserved.`,
+};
+---
+
+<footer class="relative bg-black text-gray-300 py-16">
+  <div class="lg:max-w-7xl mx-auto px-6">
+    <!-- Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-40">
+      <!-- logo -->
+      <div class="flex flex-col gap-6">
+        <div class="flex items-center gap-2">
+          <img src={footerData.logoSrc} alt="Logo" class="w-10" />
+          <span class="text-2xl font-medium text-white">{footerData.brandName}</span>
+        </div>
+        <p class="text-gray-400">{footerData.description}<br />{footerData.description2}</p>
+        <!-- SocialLinks -->
+        <SocialLinks socialLinks={footerData.socialLinks} />
+      </div>
+
+      <!-- Navigation -->
+      <div class="flex flex-col gap-6">
+        <h3 class="text-lg font-semibold text-white">Menu</h3>
+        <ul class="space-y-2.5">
+          {footerData.navigationLinks.map((link) => (
+            <li>
+              <a href={link.href} class="text-gray-400 hover:text-lime-400 transition-colors">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="mt-12 pt-8 border-t border-gray-800 text-center">
+      <p class="text-sm text-gray-400">{footerData.copyright}</p>
+    </div>
+  </div>
+</footer>

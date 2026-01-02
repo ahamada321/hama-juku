@@ -1,0 +1,31 @@
+---
+export interface HeaderProps {
+  logoSrc: string;
+  brandName: string;
+}
+
+const headerData: HeaderProps = {
+  logoSrc: '/img/logo.png',
+  brandName: 'ハマ塾',
+};
+---
+
+<header id="header-navbar" class="fixed top-0 inset-x-0 z-40">
+  <nav class="lg:max-w-7xl mx-auto px-6 py-4">
+    <div class="flex items-center gap-2 justify-between">
+      <a href="/" class="nav-link flex items-center gap-2 text-3xl font-medium">
+        <img src={headerData.logoSrc} alt="logo" class="w-10" />
+        {headerData.brandName}
+      </a>
+      <button id="offcanvasBtn" class="flex items-center gap-2 text-gray-700 hover:text-black cursor-pointer">
+        <span class="text-xl max-lg:hidden">MENU</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- JavaScript -->
+<script src="../scripts/headerScroll.js"></script>

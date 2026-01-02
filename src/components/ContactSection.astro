@@ -1,0 +1,74 @@
+---
+export interface ContactSectionProps {
+  title: string;
+  description: string;
+}
+
+const contactData: ContactSectionProps = {
+  title: 'ハマ塾 フル版 (完全版)',
+  description:
+    "断片的な知識を一つの戦略にまとめよう。 最短で突き抜けるなら【フル版】",
+};
+---
+
+<section id="contact" class="relative bg-white/70 backdrop-blur-md py-16 md:py-20">
+  <div class="lg:max-w-7xl mx-auto px-6 relative">
+    <div class="text-center mb-6">
+      <h2 class="text-3xl md:text-4xl font-semibold text-black whitespace-nowrap mb-3">
+        {contactData.title}
+      </h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">{contactData.description}</p>
+    </div>
+
+    <div class="max-w-4xl mx-auto lg:px-11 mb-12">
+      <div class="aspect-video">
+        <iframe
+          class="w-full h-full rounded-xl"
+          src="https://www.youtube.com/embed/q5caut0Ht-M"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-6 lg:px-11">
+      <div class="flex flex-col gap-6">
+        <form class="bg-white rounded-xl p-8 shadow-lg border border-black/10">
+          <div class="mb-6">
+            <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">
+              Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="w-full p-4 rounded-lg border border-black/10 focus:outline-none focus:ring-2 focus:ring-lime-400 bg-white shadow-sm"
+              placeholder="お名前（ニックネーム可）"
+              required
+            />
+          </div>
+          <div class="mb-6">
+            <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="w-full p-4 rounded-lg border border-black/10 focus:outline-none focus:ring-2 focus:ring-lime-400 bg-white shadow-sm"
+              placeholder="メールアドレス"
+              required
+            />
+          </div>
+          <button
+            type="submit"
+            class="bg-lime-300 shadow-sm text-gray-800 px-8 py-4 rounded-full font-semibold hover:bg-lime-400 transition-all transform w-full flex items-center justify-center"
+          >
+            受講前に相談する
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

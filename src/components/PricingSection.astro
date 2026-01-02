@@ -1,0 +1,83 @@
+---
+import PricingCard from './PricingCard.astro';
+
+interface PricingPlan {
+  title: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  icon: string;
+  ctaText: string;
+  ctaLink: string;
+}
+
+interface Props {
+  plans?: PricingPlan[];
+}
+
+const { 
+  plans = [
+    {
+      title: 'Basic Plan',
+      price: '$99',
+      period: '/project',
+      description: 'Perfect for small businesses or startups needing a single design solution.',
+      features: ['Logo Design', '2 Revisions', '1 Week Delivery'],
+      icon: 'M5 13l4 4L19 7',
+      ctaText: 'Choose Plan',
+      ctaLink: '/contact',
+    },
+    {
+      title: 'Pro Plan',
+      price: '$299',
+      period: '/project',
+      description: 'Ideal for businesses seeking comprehensive branding or UI/UX solutions.',
+      features: [
+        'Branding Package (Logo, Typography, Colors)',
+        'UI/UX Design (1 Platform)',
+        '5 Revisions',
+        '2 Weeks Delivery',
+      ],
+      icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z',
+      ctaText: 'Choose Plan',
+      ctaLink: '/contact',
+    },
+    {
+      title: 'Premium Plan',
+      price: '$599',
+      period: '/project',
+      description: 'Comprehensive design solutions for large-scale projects or full brand overhauls.',
+      features: [
+        'Full Branding Package',
+        'UI/UX Design (Multi-Platform)',
+        'Social Media Graphics (5 Posts)',
+        'Unlimited Revisions',
+        '3 Weeks Delivery',
+      ],
+      icon: 'M13 10V3L4 14h7v7l9-11h-7z',
+      ctaText: 'Choose Plan',
+      ctaLink: '/contact',
+    },
+  ]
+} = Astro.props;
+---
+
+<section id="pricing" class="relative bg-gray-100 border-b border-black/10 py-16 md:py-20 overflow-hidden">
+  <div class="lg:max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {plans.map((plan) => (
+        <PricingCard
+          title={plan.title}
+          price={plan.price}
+          period={plan.period}
+          description={plan.description}
+          features={plan.features}
+          icon={plan.icon}
+          ctaText={plan.ctaText}
+          ctaLink={plan.ctaLink}
+        />
+      ))}
+    </div>
+  </div>
+</section>

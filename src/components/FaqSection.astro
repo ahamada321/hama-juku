@@ -1,0 +1,51 @@
+---
+import FaqItem from './FaqItem.astro';
+
+interface Faq {
+  question: string;
+  answer: string;
+}
+
+interface Props {
+  title?: string;
+  description?: string;
+  faqs?: Faq[];
+}
+
+const { 
+  title = 'よくある質問と答え', 
+  description = 'ご不明点は遠慮なくお問い合わせください',
+  faqs = [
+    {
+      question: 'Q. 免責事項について',
+      answer: 'A. ハマ塾は、投資初心者〜中級者に向けて、金融リテラシー向上を目的とした動画教育コンテンツを提供しています。日報フィードバックは、過去チャート分析に対する学習サポートであり、動画教材と同様に投資助言には該当しません。たとえ同じ銘柄であっても、タイミング次第で利益にも損失にもなるのが投資の世界です。そのため、投資は自己責任であるという前提をご理解いただける方のみ、ハマ塾の各コースをご受講いただけます。',
+    },
+    {
+      question: 'Q. 30日間の返金保証について',
+      answer: 'A. 購入30日以内かつ進捗30%未満に限り全額返金対象です。（但し、返金時の振込手数料は購入者負担になります。）',
+    },
+    {
+      question: 'Q. わからないところは質問できますか？',
+      answer: 'A. もちろんです。ご不明点はいつでもご質問ください。ハマ塾では質問を大歓迎しています。遠慮なくご活用ください。',
+    },
+    {
+      question: 'Q. ハマ塾の受講は初めてですが大丈夫ですか？',
+      answer: 'A. 一般的なEラーニングサイトと同じ感覚でPC・スマホどちらでも視聴でき、進捗管理も自動で行えます。【フル版】はさらに過去チャート分析動画が毎日届きます。それを元に日報＆フィードバックを受けることで、自然とチャート分析が習慣化していきます。',
+    },
+  ]
+} = Astro.props;
+---
+
+<section id="faq" class="relative bg-white/70 backdrop-blur-md py-16 md:py-20 overflow-hidden">
+  <div class="lg:max-w-7xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-semibold text-black mb-2">{title}</h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto mt-3">{description}</p>
+    </div>
+    <div class="max-w-4xl lg:px-10 mx-auto space-y-4">
+      {faqs.map((faq) => (
+        <FaqItem question={faq.question} answer={faq.answer} />
+      ))}
+    </div>
+  </div>
+</section>

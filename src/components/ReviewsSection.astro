@@ -1,0 +1,109 @@
+---
+import ReviewCard from './ReviewCard.astro';
+
+export interface ReviewItem {
+  name: string;
+  role: string;
+  imageSrc: string;
+  review: string;
+  rating: number;
+}
+
+export interface ReviewsSectionProps {
+  reviews: ReviewItem[];
+}
+
+const reviewsData: ReviewsSectionProps = {
+  reviews: [
+    {
+      name: 'マサ シゲ',
+      role: 'テクニカル分析入門',
+      imageSrc: '/img/placeholder.jpg',
+      review: '動画を拝見し１度で理解できていない部分もありますが、 全くわからないところからかなり理解することができました。 何度か見直しをしてより使いこなせるようにしたいと思います。',
+      rating: 5,
+    },
+    {
+      name: 'Mai N',
+      role: 'ハマ塾 フル版',
+      imageSrc: '/img/placeholder.jpg',
+      review: 'ハマ塾のすべてが含まれており、ボリューム的にも大満足です。なかなか結果がでず辛い時期もありましたが、日報フィードバックに励まされ、少しずつですがちゃんと結果が伴ってきたことに感動しております！',
+      rating: 5,
+    },
+    {
+      name: 'けんちゃん',
+      role: 'TradingView入門',
+      imageSrc: '/img/placeholder.jpg',
+      review: 'TradingView、多機能すぎて何から触ればいいのか分からなかったのですが、丁寧な講義で、よく理解できました。ありがとうございました。',
+      rating: 5,
+    },
+    {
+      name: '西向むさし',
+      role: '出来高入門',
+      imageSrc: '/img/placeholder.jpg',
+      review: '基本的な操作を十分に理解・習得することができました。隙間時間ややる気の無い時でもちょこっとだけ進めるのに適しています。短いものだと１分位で一つの操作を学ぶことができます。',
+      rating: 5,
+    },
+    {
+      name: '西村 佳奈',
+      role: '移動平均線入門',
+      imageSrc: '/img/placeholder.jpg',
+      review: 'Udemyで先生のコースを受講して良かったので、ハマ塾のこのコースも受講しました。受講特典の黄金インジだけでも受講の価値があると思いました。',
+      rating: 5,
+    },
+    {
+      name: '後藤 竜',
+      role: 'つみたて新NISA入門',
+      imageSrc: '/img/placeholder.jpg',
+      review: 'ほとんど知識がない中での受講でしたが、わかりやすい言葉で説明されており、内容が頭に入って来やすかったです。',
+      rating: 5,
+    },
+    {
+      name: '長野大樹',
+      role: 'ハマ塾 フル版',
+      imageSrc: '/img/placeholder.jpg',
+      review: '最終的にハマ塾フル版へ行きつきました。最初から素直に入っておけば良かった少し反省してます笑 自分の無意識のズレを指摘して矯正してもらえるのと、習慣化の仕組みはフル版の良さだと思います。',
+      rating: 5,
+    },
+    {
+      name: 'Koichiro Atsumi',
+      role: 'テクニカル分析入門',
+      imageSrc: '/img/placeholder.jpg',
+      review: '非常に理解しやすかったです。音質も良く、ヘッドホンで聞いていても苦になりません。 総じて、とても良い講師/動画と感じました。応援しています。',
+      rating: 5,
+    },
+    {
+      name: '鈴木健二',
+      role: 'TradingView実践',
+      imageSrc: '/img/placeholder.jpg',
+      review: 'カスタム計算式の実践的な使い方がとても役立ちました。ありがとうございます。',
+      rating: 5,
+    },
+  ],
+};
+---
+
+<section id="reviews" class="relative py-8 bg-dots-sm border-y border-black/10">
+  <div class="relative">
+    <div class="relative overflow-hidden">
+      <div class="relative w-full h-64">
+        <div class="absolute inset-0 flex items-center">
+          <div class="reviews-marquee" id="reviewsMarquee">
+            <div class="flex gap-x-4 md:gap-x-6 px-2 md:px-3">
+              {reviewsData.reviews.map((review) => (
+                <ReviewCard review={review} />
+              ))}
+            </div>
+            <div class="flex gap-x-4 md:gap-x-6 px-2 md:px-3">
+              {reviewsData.reviews.map((review) => (
+                <ReviewCard review={review} />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JavaScript -->
+<script src="../scripts/reviewsMarquee.js"></script>

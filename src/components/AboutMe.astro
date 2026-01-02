@@ -1,0 +1,177 @@
+---
+interface Props {
+  name: string;
+  job: string;
+  availability: boolean;
+  description: string;
+  tools: { name: string; percentage: number }[];
+  profileImage: string;
+  screenImage: string;
+}
+
+const { name, job, availability, description, tools, profileImage, screenImage } = Astro.props;
+---
+
+<section
+  id="about-me"
+  class="relative bg-white border-b border-black/10 py-16 md:py-20 overflow-hidden"
+>
+  <div class="lg:max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <!-- Monitor Section -->
+      <div class="lg:order-2 max-lg:mb-4 flex flex-col lg:ps-16">
+        <!-- Monitor Stand -->
+        <div class="order-2 flex items-center justify-center">
+          <div class="relative">
+            <div
+              class="-mt-3 w-12 h-10 bg-gradient-to-b from-gray-900 to-black shadow-lg mx-auto border-x border-gray-300"
+            ></div>
+            <div
+              class="w-40 h-5 bg-gradient-to-b from-black to-gray-900 shadow-lg rounded-t-lg mx-auto"
+            ></div>
+          </div>
+        </div>
+        <!-- Monitor Profile -->
+        <div
+          class="order-1 relative w-full rounded-xl border-[8px] border-black aspect-video overflow-hidden flex flex-col items-center justify-center"
+        >
+          <img
+            src={screenImage}
+            alt="Screen App"
+            class="absolute top-0 inset-x-0 w-full"
+          />
+          <div class="absolute inset-0 bg-black/60"></div>
+          <div
+            class="relative size-20 sm:size-24 rounded-full overflow-hidden bg-white border-2 border-white mb-2"
+          >
+            <img src={profileImage} alt={name} class="w-full" />
+          </div>
+          {availability && (
+            <div class="relative flex items-center justify-center gap-2 mb-1">
+              <div class="size-3 bg-lime-500 rounded-full animate-pulse"></div>
+              <span class="text-sm text-white">Available for work</span>
+            </div>
+          )}
+          <h2 class="text-xl md:text-2xl font-semibold text-white relative">{job}</h2>
+        </div>
+        <!-- Keyboard and Mouse -->
+        <div class="relative order-3 mt-6 mx-auto flex items-center gap-12">
+          <div class="relative item-3d keyboard-3d">
+            <div class="w-72 h-24 bg-white rounded-lg shadow-3d p-2">
+              <div class="grid grid-rows-4 gap-1 h-full">
+                <!-- Row 1 -->
+                <div class="flex gap-1">
+                  {Array(12)
+                    .fill(0)
+                    .map(() => (
+                      <div
+                        class="flex-1 bg-gray-200 rounded-sm hover:bg-gray-500 shadow-sm"
+                      ></div>
+                    ))}
+                  <div
+                    class="flex-2 bg-gray-200 rounded-sm hover:bg-gray-500 shadow-sm"
+                  ></div>
+                </div>
+                <!-- Row 2 -->
+                <div class="flex gap-1">
+                  <div
+                    class="flex-2 bg-gray-200 rounded-sm hover:bg-gray-500 shadow-sm"
+                  ></div>
+                  {Array(11)
+                    .fill(0)
+                    .map(() => (
+                      <div
+                        class="flex-1 bg-gray-200 rounded-sm hover:bg-gray-500 shadow-sm"
+                      ></div>
+                    ))}
+                  <div
+                    class="flex-2 bg-gray-200 rounded-sm hover:bg-gray-500 shadow-sm"
+                  ></div>
+                </div>
+                <!-- Row 3 -->
+                <div class="grid grid-cols-12 gap-1">
+                  <div
+                    class="col-span-2 bg-gray-200 rounded-sm hover:bg-gray-500 shadow-sm"
+                  ></div>
+                  {Array(8)
+                    .fill(0)
+                    .map(() => (
+                      <div
+                        class="bg-gray-200 rounded-sm hover:bg-gray-500 shadow-sm"
+                      ></div>
+                    ))}
+                  <div
+                    class="col-span-2 bg-gray-200 rounded-sm hover:bg-gray-500 shadow-sm"
+                  ></div>
+                </div>
+                <!-- Row 4 -->
+                <div class="grid grid-cols-9 gap-1">
+                  {Array(3)
+                    .fill(0)
+                    .map(() => (
+                      <div
+                        class="bg-gray-200 rounded-sm hover:bg-gray-500 shadow-sm"
+                      ></div>
+                    ))}
+                  <div
+                    class="col-span-3 bg-gray-200 rounded-sm hover:bg-gray-500 shadow-sm"
+                  ></div>
+                  {Array(3)
+                    .fill(0)
+                    .map(() => (
+                      <div
+                        class="bg-gray-200 rounded-sm hover:bg-gray-500 shadow-sm"
+                      ></div>
+                    ))}
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Mouse -->
+          <div class="relative item-3d mouse-3d max-sm:hidden">
+            <div
+              class="w-12 h-20 bg-white rounded-2xl shadow-3d relative overflow-hidden"
+            >
+              <div
+                class="absolute top-1 left-0.5 w-4 h-8 bg-gray-100 hover:bg-gray-500/20 rounded-tl-xl shadow-sm"
+              ></div>
+              <div
+                class="absolute top-1 right-0.5 w-4 h-8 bg-gray-100 hover:bg-gray-500/20 rounded-tr-xl shadow-sm"
+              ></div>
+              <div
+                class="absolute top-2.5 left-1/2 transform -translate-x-1/2 w-2 h-4 bg-gray-300 rounded-full shadow-sm"
+              ></div>
+              <div
+                class="absolute top-8 left-1/2 transform -translate-x-1/2 size-1.5 bg-gray-300 rounded-full"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Text and Tools -->
+      <div class="lg:order-1 flex flex-col">
+        <p class="text-gray-700 text-lg mb-4">{description}</p>
+        <div class="relative">
+          <h4 class="text-lg font-semibold text-black mb-4">Tools</h4>
+          <div class="space-y-4 text-gray-700">
+            {tools.map((tool) => (
+              <div class="relative">
+                <div class="flex justify-between text-sm mb-1">
+                  <span class="font-medium">{tool.name}</span>
+                  <span>{tool.percentage}%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-3">
+                  <div
+                    class="bg-lime-400 h-3 rounded-full"
+                    style={`width: ${tool.percentage}%`}
+                  ></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

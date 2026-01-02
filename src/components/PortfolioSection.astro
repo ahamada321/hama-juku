@@ -1,0 +1,132 @@
+---
+import PortfolioCard from './PortfolioCard.astro';
+import PortfolioModal from './PortfolioModal.astro';
+
+export interface PortfolioItem {
+  id: number;
+  title: string;
+  category: string;
+  description: string;
+  srcImg: string;
+  href: string;
+}
+
+export interface PortfolioSectionProps {
+  title: string;
+  portfolios: PortfolioItem[];
+  trustedBy: { src: string; alt: string }[];
+  title2: string;
+  portfolios2: PortfolioItem[];
+}
+
+const portfolioData: PortfolioSectionProps = {
+  title: '① 基礎コース',
+  portfolios: [
+    {
+      id: 1,
+      title: "つみたて新NISA入門",
+      category: "基礎知識編",
+      description: "つみたて投資枠に最適なインデックス投資の考え方を学び、実際に積立投資を開始しましょう",
+      srcImg: "/img/project1.jpg",
+      href: "https://www.udemy.com/course/how-to-invest-in-index-funds/?referralCode=519E379A25FE9C507B55",
+    },
+    {
+      id: 2,
+      title: "TradingView入門",
+      category: "基礎知識",
+      description: "トレーディングビューを知識ゼロから実践レベルまで一気に使えるようになります",
+      srcImg: "/img/project2.jpg",
+      href: "https://www.udemy.com/course/tradingview-for-beginners/?referralCode=55F51D6982BDD05B13A2",
+    },
+    {
+      id: 3,
+      title: "テクニカル分析入門",
+      category: "基礎知識",
+      description: "ヘッドアンドショルダーや水平線の引き方などの基礎を学び、実践で使える知識を養います",
+      srcImg: "/img/project3.jpg",
+      href: "https://www.udemy.com/course/technical-analysis-course-for-beginners/?referralCode=8434912DAA3A907E9C7F",
+    },
+    {
+      id: 4,
+      title: "出来高入門",
+      category: "基礎知識",
+      description: "出来高・価格帯別出来高・出来高加重平均 (VWAP)を学び、エントリー/利確精度を高めます",
+      srcImg: "/img/project4.jpg",
+      href: "https://www.udemy.com/course/volume-trading/?referralCode=E8F35D826AEF6F3658F9",
+    },
+  ],
+  trustedBy: [
+    { src: '/img/logo1.png', alt: 'Company 1' },
+    { src: '/img/logo2.png', alt: 'Company 2' },
+    { src: '/img/logo3.png', alt: 'Company 3' },
+    { src: '/img/logo4.png', alt: 'Company 4' },
+  ],
+  title2: '② 勝つための環境整備',
+  portfolios2: [
+    {
+      id: 5,
+      title: "TradingView応用",
+      category: "環境整備",
+      description: "無料機能に制限せず、実践で勝つために必要なノウハウを学びます",
+      srcImg: "/img/project5.jpg",
+      href: "https://hama-juku.thinkific.com/products/courses/tradingview-premium-course",
+    },
+    {
+      id: 6,
+      title: "移動平均線入門",
+      category: "環境整備",
+      description: "「ハマ塾式 黄金インジ」を使いながら、実践で使える移動平均線を習得します",
+      srcImg: "/img/project6.jpg",
+      href: "https://hama-juku.thinkific.com/products/courses/moving-average",
+    },
+    {
+      id: 7,
+      title: "プライスアクション入門",
+      category: "環境整備",
+      description: "「ハマ塾式 梅と緑茶インジ」を使い、実践で通用するプライスアクションを身につけます",
+      srcImg: "/img/project7.jpg",
+      href: "https://hama-juku.thinkific.com/products/courses/price-action",
+    },
+  ],
+};
+---
+
+<section id="portfolio" class="relative bg-gray-100 py-16 md:py-20">
+  <div class="lg:max-w-7xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-semibold text-black whitespace-nowrap">
+        {portfolioData.title}
+      </h2>
+    </div>
+    <div id="portfolio-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      {portfolioData.portfolios.map((portfolio) => (
+        <PortfolioCard portfolio={portfolio} />
+      ))}
+    </div>
+    <div class="mt-16">
+      <h3 class="text-xl font-medium text-center mb-3 text-gray-600">Trusted By</h3>
+      <div class="flex flex-wrap justify-center items-center gap-6">
+        {portfolioData.trustedBy.map((logo) => (
+          <img
+            src={logo.src}
+            alt={logo.alt}
+            class="h-14 grayscale hover:grayscale-0 transition-all duration-300"
+          />
+        ))}
+      </div>
+    </div>
+    <div class="text-center mt-16 mb-12">
+      <h2 class="text-3xl md:text-4xl font-semibold text-black whitespace-nowrap">
+        {portfolioData.title2}
+      </h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      {portfolioData.portfolios2.map((portfolio) => (
+        <PortfolioCard portfolio={portfolio} />
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- JavaScript -->
+<script src="../scripts/portfolio.js"></script>

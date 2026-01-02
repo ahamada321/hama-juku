@@ -1,0 +1,25 @@
+---
+import Layout from '@src/layouts/Layout.astro';
+import BlogSection from '@components/BlogSection.astro';
+import { blogPosts } from '@src/data/BlogItems';
+import HeadingPage from '@components/HeadingPage.astro';
+
+const postsPerPage = 3;
+const currentPage = 1;
+const totalPosts = blogPosts.length;
+const totalPages = Math.ceil(totalPosts / postsPerPage);
+const posts = blogPosts.slice(0, postsPerPage);
+---
+
+<Layout title="Latest Blogs - Craftpixel">
+  <HeadingPage
+    title="Latest Blogs"
+    description="Explore our insights on design trends, tips, and creative inspiration to elevate your projects."
+  />
+  <BlogSection
+    posts={posts}
+    currentPage={currentPage}
+    totalPages={totalPages}
+    baseUrl="/blog/"
+  />
+</Layout>

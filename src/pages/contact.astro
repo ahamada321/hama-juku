@@ -1,0 +1,16 @@
+---
+import Layout from '@src/layouts/Layout.astro';
+
+// Import
+import ContactMe from '@components/ContactMe.astro';
+import HeadingPage from '@src/components/HeadingPage.astro';
+---
+
+<Layout title="お問い合わせ | ハマ塾">
+  <HeadingPage
+    position='absolute',
+    title="お問い合わせ"
+    description="ご不明点や質問など、お気軽にお問い合わせください"
+  />
+  <ContactMe />
+</Layout>

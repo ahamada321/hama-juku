@@ -1,0 +1,73 @@
+---
+import ServiceCard from './ServiceCard.astro';
+
+export interface ServiceItem {
+  title: string;
+  description: string;
+  iconSvg: string;
+}
+
+export interface ServicesSectionProps {
+  title: string;
+  services: ServiceItem[];
+}
+
+const servicesData: ServicesSectionProps = {
+  title: 'Services',
+  services: [
+    {
+      title: '① 基礎コースを学ぶ',
+      description: 'TradingView入門、テクニカル分析入門などの必要な基礎知識や基本操作を学ぶ',
+      iconSvg:
+        '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />',
+    },
+    {
+      title: '② 勝つための環境整備',
+      description: 'ハマ塾式黄金インジゲーター、梅と緑茶インジ等の使い方を習得し、勝つための分析環境を整える',
+      iconSvg:
+        '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />',
+    },
+    {
+      title: '③ 投資家マインドを育む',
+      description: '運ではなく、精神をすり減らしながら戦うのでもなく、勝てるべくして勝てている状態を作るための投資マインドを育む',
+      iconSvg:
+        '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />',
+    },
+    {
+      title: '④ 実践スキルを習得する',
+      description: 'ロット管理や期待値管理、指値、逆指値、トレーリングなどの実践スキルを学び、習得する',
+      iconSvg:
+        '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />',
+    },
+    {
+      title: '⑤ 規律を整える',
+      description: '過去チャート分析動画が毎日届く。自分でも分析→日報→フィードバックでチャートを見る習慣が手に入る(FB後に次の動画が届く仕組みで規律も整う)',
+      iconSvg:
+        '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />',
+    },
+    {
+      title: '⑥ 喜びを分かち合う',
+      description: '結果を出すには努力が必要です。だからこそ、時には成長や喜びを分かち合いながら、次へのモチベーションに繋げる',
+      iconSvg:
+        '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />',
+    },
+  ],
+};
+---
+
+<section id="services" class="relative bg-gray-100 py-16 md:py-20 overflow-hidden">
+  <div class="lg:max-w-7xl mx-auto px-6 relative">
+    <div class="flex flex-col lg:flex-row gap-8">
+      <div class="w-full lg:w-20 flex items-center justify-center lg:justify-start lg:order-2">
+        <h2 class="text-3xl md:text-4xl font-semibold text-black lg:text-[100px] lg:-translate-x-48 lg:text-gray-400 lg:uppercase transform lg:rotate-90 whitespace-nowrap">
+          {servicesData.title}
+        </h2>
+      </div>
+      <div class="lg:order-1 grow grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {servicesData.services.map((service) => (
+          <ServiceCard service={service} />
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

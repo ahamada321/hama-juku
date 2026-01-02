@@ -1,0 +1,26 @@
+---
+import Layout from '@src/layouts/Layout.astro';
+import BlogDetail from '@components/BlogDetail.astro';
+import { blogPosts } from '@src/data/BlogItems';
+
+export async function getStaticPaths() {
+  return blogPosts.map((post) => ({
+    params: { slug: post.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const post = blogPosts.find((p) => p.slug === slug);
+
+if (!post) {
+  return Astro.redirect('/404');
+}
+
+const relatedPosts = blogPosts
+  .filter((p) => p.slug !== slug && p.categories.some((cat) => post.categories.includes(cat)))
+  .slice(0, 3);
+---
+
+<Layout title={post.title} >
+  <BlogDetail post={post} relatedPosts={relatedPosts} />
+</Layout>

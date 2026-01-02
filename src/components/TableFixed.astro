@@ -1,0 +1,123 @@
+---
+export interface DeskItemProps {
+  photos: { src: string; alt: string; position: string; rotation: string }[];
+  clock: { visible: boolean };
+  plant: { visible: boolean };
+  object: { visible: boolean };
+}
+
+const deskItemData: DeskItemProps = {
+  photos: [
+    {
+      src: '/img/photo.jpg',
+      alt: 'photos',
+      position: 'absolute -top-24 left-4 w-24 h-28',
+      rotation: '-rotate-3 hover:rotate-0',
+    },
+    {
+      src: '/img/profile.jpg',
+      alt: 'photos',
+      position: 'absolute -top-16 left-32 w-24 h-20',
+      rotation: 'rotate-2 hover:rotate-0',
+    },
+  ],
+  clock: { visible: true },
+  plant: { visible: true },
+  object: { visible: true },
+};
+---
+
+<div class="fixed bottom-0 inset-x-0 flex flex-col">
+  <div class="relative w-full h-8 bg-gradient-to-b from-[#efce9f] to-[#efd3ad]">
+    {deskItemData.photos.map((photo) => (
+      <div
+        class={`absolute bg-white border border-black/10 rounded-lg p-1 shadow-lg transform transition-transform duration-300 ${photo.position} ${photo.rotation}`}
+      >
+        <div class="w-full h-full bg-gradient-to-br from-blue-200 to-blue-400 rounded overflow-hidden">
+          <img src={photo.src} alt={photo.alt} class="w-full" />
+        </div>
+      </div>
+    ))}
+    {deskItemData.clock.visible && (
+      <div
+        class="absolute -top-14 left-64 w-20 h-20 bg-white rounded-full border-4 border-gray-300 flex items-center justify-center overflow-hidden max-sm:hidden"
+      >
+        <div class="w-20 h-20 rounded-full relative">
+          <div
+            class="absolute top-9 left-10 w-3 h-0.5 bg-gradient-to-b from-gray-800 to-gray-400 transform -translate-x-1/2 -translate-y-1/2 rotate-45 origin-left"
+          ></div>
+          <div
+            class="absolute top-9 left-11 w-5 h-0.5 bg-gradient-to-b from-gray-600 to-gray-400 transform -translate-x-1/2 -translate-y-1/2 rotate-90 origin-left"
+          ></div>
+          <div
+            class="absolute top-0.5 left-1/2 transform -translate-x-1/2 text-xs font-bold"
+          >
+            12
+          </div>
+          <div
+            class="absolute bottom-0.5 left-1/2 transform -translate-x-1/2 text-xs font-bold"
+          >
+            6
+          </div>
+          <div
+            class="absolute right-0.5 bottom-1/2 transform translate-y-1/2 text-xs font-bold"
+          >
+            3
+          </div>
+          <div
+            class="absolute left-0.5 bottom-1/2 transform translate-y-1/2 text-xs font-bold"
+          >
+            9
+          </div>
+        </div>
+      </div>
+    )}
+    {deskItemData.plant.visible && (
+      <div class="absolute -top-12 right-6 flex flex-col items-center">
+        <div
+          class="w-16 h-18 bg-gradient-to-b from-gray-300 to-gray-500 rounded-2xl shadow-lg"
+        >
+          <div
+            class="w-full h-6 border-4 border-gray-200 bg-gradient-to-b from-amber-900 to-amber-600 rounded-full"
+          ></div>
+        </div>
+        <div class="plant-animation -mt-24 z-10">
+          <div class="w-1 h-6 bg-green-600 mx-auto"></div>
+          <div class="relative -mt-16">
+            <div
+              class="w-6 h-20 bg-gradient-to-t from-green-800 via-green-500 to-lime-400 rounded-full absolute -left-6 transform -rotate-12"
+            ></div>
+            <div
+              class="w-6 h-20 bg-gradient-to-t from-green-800 via-green-500 to-lime-400 rounded-full absolute left-2 transform rotate-12"
+            ></div>
+            <div
+              class="w-8 h-28 bg-gradient-to-t from-green-800 via-green-500 to-lime-400 rounded-full absolute -left-3 -top-8"
+            ></div>
+          </div>
+        </div>
+      </div>
+    )}
+    {deskItemData.object.visible && (
+      <div
+        class="absolute top-2 right-32 transform rotate-0 transition-transform duration-300"
+      >
+        <div class="flex items-center">
+          <div
+            class="w-6 h-4 border-2 border-gray-800 rounded-full bg-blue-100 opacity-50"
+          ></div>
+          <div class="w-2 h-0.5 bg-gray-800"></div>
+          <div
+            class="w-6 h-4 border-2 border-gray-800 rounded-full bg-blue-100 opacity-50"
+          ></div>
+        </div>
+        <div
+          class="absolute left-0 top-1 w-8 h-0.5 bg-gray-800 transform -rotate-12"
+        ></div>
+        <div
+          class="absolute right-0 top-1 w-8 h-0.5 bg-gray-800 transform rotate-12"
+        ></div>
+      </div>
+    )}
+  </div>
+  <div class="relative w-full h-6 bg-gradient-to-t from-[#e0ab68] to-[#e9bb7f]"></div>
+</div>

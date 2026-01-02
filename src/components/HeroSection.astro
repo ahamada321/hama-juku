@@ -1,0 +1,71 @@
+---
+import DeskItem from './DeskItem.astro';
+import TableFixed from './TableFixed.astro';
+
+export interface HeroProps {
+  title: string;
+  description: string;
+  ctaButtons: { label: string; href: string; color: 'lime' | 'white' }[];
+}
+
+const heroData: HeroProps = {
+  title: '相場に流されない根拠を手に入れよ',
+  description: 'Udemy受講生3.8万人突破。他多数。',
+  ctaButtons: [
+    { label: '基礎コースはこちら', href: '#portfolio', color: 'white' },
+    { label: 'ハマ塾 フル版はこちら', href: '#contact', color: 'lime' },
+  ],
+};
+---
+
+<section id="hero-section" class="relative bg-gray-200 border-b border-black/10 pt-24 pb-16 md:pb-20 flex flex-col items-center justify-center overflow-hidden">
+  <TableFixed />
+  <!-- content -->
+  <div class="order-1 lg:max-w-7xl mx-auto px-6 relative text-center">
+    <div class="relative max-w-3xl mx-auto py-12">
+      <h1 class="text-5xl sm:text-6xl md:text-7xl font-semibold mb-3 text-black leading-tight md:leading-tight">
+        {heroData.title}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="48"
+          height="48"
+          fill="currentColor"
+          class="item-3d mouse-3d flex max-sm:mx-auto sm:inline-flex bi bi-vector-pen"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10.646.646a.5.5 0 0 1 .708 0l4 4a.5.5 0 0 1 0 .708l-1.902 1.902-.829 3.313a1.5 1.5 0 0 1-1.024 1.073L1.254 14.746 4.358 4.4A1.5 1.5 0 0 1 5.43 3.377l3.313-.828zm-1.8 2.908-3.173.793a.5.5 0 0 0-.358.342l-2.57 8.565 8.567-2.57a.5.5 0 0 0 .34-.357l.794-3.174-3.6-3.6z"
+          />
+          <path
+            fill-rule="evenodd"
+            d="M2.832 13.228 8 9a1 1 0 1 0-1-1l-4.228 5.168-.026.086z"
+          />
+        </svg>
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-700 mb-8 max-w-2xl mx-auto">
+        {heroData.description}
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        {heroData.ctaButtons.map((button) => (
+          <a
+            href={button.href}
+            data-scroll="smooth"
+            class={`nav-link px-8 py-4 rounded-full font-semibold shadow-sm text-gray-800 transition-all transform ${
+              button.color === 'lime'
+                ? 'bg-lime-300 hover:bg-lime-400'
+                : 'bg-white hover:bg-gray-200'
+            }`}
+          >
+            {button.label}
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+  <!-- 3D Desk Item -->
+  <DeskItem />
+</section>
+
+<!-- JavaScript -->
+<script src="../scripts/smoothScroll.js"></script>
