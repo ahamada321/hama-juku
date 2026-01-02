@@ -9,13 +9,13 @@ interface Props {
 const { title, description, ctaText, ctaLink } = Astro.props;
 ---
 
-<section id="cta" class="relative bg-dots bg-black/80 py-16 md:py-20">
+<section id="cta" class="relative bg-dots bg-black/75 py-16 md:py-20">
   <div class="lg:max-w-7xl mx-auto px-6 relative text-center">
     <h2 class="text-3xl md:text-4xl font-semibold text-white mb-3">{title}</h2>
     <p class="text-lg text-gray-200 max-w-2xl mx-auto mb-12">{description}</p>
     <a
       href={ctaLink}
-      class="nav-link bg-lime-300 shadow-sm text-gray-800 px-8 py-4 rounded-full font-semibold hover:bg-lime-400 transition-all transform"
+      class="nav-link bg-lime-300 shadow-md text-gray-800 px-8 py-4 rounded-full font-semibold hover:bg-lime-400 transition-all transform"
     >
       {ctaText}
     </a>
