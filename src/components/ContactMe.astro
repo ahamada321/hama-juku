@@ -16,6 +16,7 @@ interface Props {
     <div class="flex flex-col gap-6">
       <!-- Contact Form -->
         <form action="/contact-success" method="POST" class="space-y-4" data-netlify="true" name="contact">
+          <input type="hidden" name="subject" value="お問い合わせが来ました【ハマ塾 Astro】" />
           <div>
             <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
             <input
