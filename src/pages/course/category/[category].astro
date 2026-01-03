@@ -1,0 +1,37 @@
+---
+import Layout from '@src/layouts/Layout.astro';
+import CourseSection from '@components/CourseSection.astro';
+import { coursePosts } from '@src/data/CourseItems';
+import HeadingPage from '@src/components/HeadingPage.astro';
+
+export async function getStaticPaths() {
+  const categories = Array.from(new Set(coursePosts.flatMap((post) => post.categories)));
+  return categories.map((category) => ({
+    params: { category },
+  }));
+}
+
+const { category } = Astro.params;
+const categoryPosts = coursePosts.filter((post) => post.categories.includes(category));
+const postsPerPage = 3;
+const currentPage = 1;
+const totalPosts = categoryPosts.length;
+const totalPages = Math.ceil(totalPosts / postsPerPage);
+const posts = categoryPosts.slice(0, postsPerPage);
+
+if (!categoryPosts.length) {
+  return Astro.redirect('/404');
+}
+---
+
+<Layout title={`Category: ${category.charAt(0).toUpperCase() + category.slice(1).replace('-', ' ')}`}>
+  <HeadingPage
+        title={`Category: ${category.charAt(0).toUpperCase() + category.slice(1).replace('-', ' ')}`}
+        description="Explore our insights on design trends, tips, and creative inspiration to elevate your projects." />
+  <CourseSection
+    posts={posts}
+    currentPage={currentPage}
+    totalPages={totalPages}
+    baseUrl={`/course/category/${category}/`}
+  />
+</Layout>

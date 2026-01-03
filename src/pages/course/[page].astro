@@ -1,0 +1,39 @@
+---
+import Layout from '@src/layouts/Layout.astro';
+import CourseSection from '@components/CourseSection.astro';
+import { coursePosts } from '@src/data/CourseItems';
+import HeadingPage from '@components/HeadingPage.astro';
+
+export async function getStaticPaths() {
+  const postsPerPage = 3;
+  const totalPosts = coursePosts.length;
+  const totalPages = Math.ceil(totalPosts / postsPerPage);
+  return Array.from({ length: totalPages }, (_, i) => ({
+    params: { page: (i + 1).toString() },
+  }));
+}
+
+const { page } = Astro.params;
+const currentPage = parseInt(page);
+const postsPerPage = 3;
+const totalPosts = coursePosts.length;
+const totalPages = Math.ceil(totalPosts / postsPerPage);
+const start = (currentPage - 1) * postsPerPage;
+const posts = coursePosts.slice(start, start + postsPerPage);
+
+if (!posts.length) {
+  return Astro.redirect('/404');
+}
+---
+
+<Layout title={ page === '1' ? 'Latest Courses' : `Page ${currentPage} - Latest Courses`}>
+    <HeadingPage
+        title={ page === '1' ? 'Latest Courses' : `Page ${currentPage} - Latest Courses`}
+        description="Explore our insights on design trends, tips, and creative inspiration to elevate your projects." />
+  <CourseSection
+    posts={posts}
+    currentPage={currentPage}
+    totalPages={totalPages}
+    baseUrl="/course/"
+  />
+</Layout>

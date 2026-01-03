@@ -1,0 +1,70 @@
+---
+import TableAbsolute from './TableAbsolute.astro';
+import TableFixed from './TableFixed.astro';
+
+interface Props {
+  title: string;
+  excerpt: string;
+  image: string;
+  youtube: string;
+  price: number;
+  position?: 'absolute' | 'fixed';
+}
+
+const { title, excerpt, image, youtube, price, position = "fixed" } = Astro.props;
+---
+
+<section
+  id="heading-course"
+  class="relative bg-gray-100 pt-20 pb-4 flex flex-col items-center justify-center overflow-hidden"
+>
+  {position === 'fixed' ? (
+    <TableFixed />
+  ) : (
+    <TableAbsolute />
+  )}
+
+  <div class="lg:max-w-7xl mx-auto px-6 lg:px-12">
+    <div class="grid grid-cols-1 lg:grid-cols-2">
+      <!-- About Text and Tools -->
+      <div class="lg:order-1 flex flex-col lg:mt-12">
+        <h2 class="text-4xl md:text-5xl font-semibold text-black mb-3">{title}</h2>
+        <p class="text-gray-700 text-lg mb-4">{excerpt}</p>
+      </div>
+      <!-- Monitor Section -->
+      <div class="lg:order-2 flex flex-col lg:px-10 lg:ps-16">
+        <!-- Monitor Stand -->
+        <div class="order-2 flex items-center justify-center">
+          <div class="relative">
+            <div
+              class="-mt-3 w-12 h-10 bg-gradient-to-b from-gray-900 to-black shadow-lg mx-auto border-x border-gray-300"
+            ></div>
+            <div
+              class="w-40 h-5 bg-gradient-to-b from-black to-gray-900 shadow-lg rounded-t-lg mx-auto"
+            ></div>
+          </div>
+        </div>
+        <!-- Monitor Profile -->
+        <div
+          class="order-1 relative w-full rounded-xl border-[8px] border-black aspect-video overflow-hidden flex flex-col items-center justify-center"
+        >
+          <!-- <img
+            src={image}
+            alt="Screen App"
+            class="absolute top-0 inset-x-0 w-full"
+          /> -->
+          <iframe
+            src={youtube}
+            class="absolute top-0 inset-x-0 w-full h-full"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <!-- <div class="absolute inset-0 bg-black/60"></div> -->
+        </div>
+        <h3 class="about-perspective order-3 mt-2 text-5xl text-center font-semibold text-gray-400 uppercase">
+          紹介動画を見る
+        </h3>
+      </div>
+    </div>
+  </div>
+</section>

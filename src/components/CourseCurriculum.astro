@@ -1,0 +1,34 @@
+---
+import CourseCurriculumItem from './CourseCurriculumItem.astro';
+
+interface Lectures {
+  title: string;
+  preview: boolean;
+}
+
+interface Sections {
+  title: string;
+  lectures: Lectures[];
+}
+
+interface Props {
+  url: string;
+  sections: Sections[];
+}
+
+const { url, sections } = Astro.props;
+---
+
+<section id="curriculum" class="relative bg-white/70 backdrop-blur-md py-6 md:py-8 overflow-hidden">
+  <div class="lg:max-w-7xl mx-auto px-6">
+    <div class="text-center mb-8">
+      <h2 class="text-3xl md:text-4xl font-semibold text-black py-4">コースカリキュラム</h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">{sections.length}つのセクション：{sections.reduce((sum, section) => sum + section.lectures.length, 0)}個のレクチャー動画</p>
+    </div>
+    <div class="max-w-4xl lg:px-10 mx-auto space-y-4">
+      {sections.map((section) => (
+        <CourseCurriculumItem url={url} title={section.title} lectures={section.lectures} />
+      ))}
+    </div>
+  </div>
+</section>

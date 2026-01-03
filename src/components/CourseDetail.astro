@@ -1,0 +1,53 @@
+---
+import CourseCard from './CourseCard.astro';
+import type { CoursePost } from '@src/data/CourseItems';
+
+interface Props {
+  post: CoursePost;
+  relatedPosts: CoursePost[];
+}
+
+const { post, relatedPosts } = Astro.props;
+---
+
+<section id="course-detail" class="relative bg-gray-100 pb-16 pt-16 overflow-hidden">
+  <div class="lg:max-w-6xl mx-auto px-6 lg:px-16">
+
+        <div class="rounded-2xl bg-white p-6 border border-black/10 max-w-sm">
+          <div class="flex justify-center items-baseline mb-4 gap-4">
+            <h3 class="text-2xl font-semibold text-black">¥ {new Intl.NumberFormat('ja-JP').format(post.price)}</h3>
+            <p class="text-gray-600">| 30日間返金保証付</p>
+          </div>
+          <div class="flex flex-col text-center gap-4">
+            <a
+              href={"button.href"}
+              class="nav-link py-4 rounded-xl font-semibold shadow-md text-gray-800 transition-all transform bg-lime-300 hover:bg-lime-400"
+            >カートに入れる</a>
+            <a
+              href={"button.href"}
+              class="nav-link py-4 rounded-xl font-semibold shadow-md text-gray-800 transition-all transform bg-white hover:bg-gray-200"
+            >無料体験する</a>
+          </div>
+        </div>
+    <!-- Post Content -->
+    <div class="sm:bg-white sm:rounded-3xl sm:border sm:border-black/10 sm:shadow-lg mb-12">
+      <img src={post.image} alt={post.alt} class="w-full h-auto rounded-xl" />
+      <div class="sm:px-8 pt-6 sm:pb-8 post-content" set:html={post.sections} />
+    </div>
+    <!-- Related Articles -->
+    <div class="flex flex-col gap-6">
+      <h3 class="text-2xl md:text-3xl font-semibold">Related Posts</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {relatedPosts.map((relatedPost) => (
+          <CourseCard
+            slug={relatedPost.slug}
+            title={relatedPost.title}
+            excerpt={relatedPost.excerpt}
+            image={relatedPost.image}
+            alt={relatedPost.alt}
+          />
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,14 +1,13 @@
 ---
 import PortfolioCard from './PortfolioCard.astro';
-import PortfolioModal from './PortfolioModal.astro';
 
 export interface PortfolioItem {
-  id: number;
-  title: string;
-  category: string;
-  description: string;
-  srcImg: string;
+  slug?: string;
   href: string;
+  title: string;
+  excerpt: string;
+  image: string;
+  category: string;
 }
 
 export interface PortfolioSectionProps {
@@ -16,42 +15,37 @@ export interface PortfolioSectionProps {
   portfolios: PortfolioItem[];
   trustedBy: { src: string; alt: string }[];
   title2: string;
-  portfolios2: PortfolioItem[];
 }
 
 const portfolioData: PortfolioSectionProps = {
   title: '① 基礎コース',
   portfolios: [
     {
-      id: 1,
       title: "つみたて新NISA入門",
       category: "基礎知識 (詳細を見る)",
-      description: "つみたて投資枠に最適なインデックス投資の考え方を学び、実際に積立投資を開始しましょう",
-      srcImg: "/img/project1.jpg",
+      excerpt: "つみたて投資枠に最適なインデックス投資の考え方を学び、実際に積立投資を開始しましょう",
+      image: "/img/project1.jpg",
       href: "https://www.udemy.com/course/how-to-invest-in-index-funds/?referralCode=519E379A25FE9C507B55",
     },
     {
-      id: 2,
       title: "TradingView入門",
       category: "基礎知識 (詳細を見る)",
-      description: "トレーディングビューを知識ゼロから実践レベルまで一気に使えるようになります",
-      srcImg: "/img/project2.jpg",
+      excerpt: "トレーディングビューを知識ゼロから実践レベルまで一気に使えるようになります",
+      image: "/img/project2.jpg",
       href: "https://www.udemy.com/course/tradingview-for-beginners/?referralCode=55F51D6982BDD05B13A2",
     },
     {
-      id: 3,
       title: "テクニカル分析入門",
       category: "基礎知識 (詳細を見る)",
-      description: "ヘッドアンドショルダーや水平線の引き方などの基礎を学び、実践で使える知識を養います",
-      srcImg: "/img/project3.jpg",
+      excerpt: "ヘッドアンドショルダーや水平線の引き方などの基礎を学び、実践で使える知識を養います",
+      image: "/img/project3.jpg",
       href: "https://www.udemy.com/course/technical-analysis-course-for-beginners/?referralCode=8434912DAA3A907E9C7F",
     },
     {
-      id: 4,
       title: "出来高入門",
       category: "基礎知識 (詳細を見る)",
-      description: "出来高・価格帯別出来高・出来高加重平均 (VWAP)を学び、エントリー/利確精度を高めます",
-      srcImg: "/img/project4.jpg",
+      excerpt: "出来高・価格帯別出来高・出来高加重平均 (VWAP)を学び、エントリー/利確精度を高めます",
+      image: "/img/project4.jpg",
       href: "https://www.udemy.com/course/volume-trading/?referralCode=E8F35D826AEF6F3658F9",
     },
   ],
@@ -62,33 +56,37 @@ const portfolioData: PortfolioSectionProps = {
     { src: '/img/logo4.png', alt: 'Company 4' },
   ],
   title2: '② 勝つための環境整備',
-  portfolios2: [
-    {
-      id: 5,
-      title: "TradingView【実践攻略】",
-      category: "環境整備 (詳細を見る)",
-      description: "無料機能に制限せず、実践で勝つために必要なノウハウを学びます",
-      srcImg: "/img/project5.jpg",
-      href: "https://hama-juku.thinkific.com/products/courses/tradingview-premium-course",
-    },
-    {
-      id: 6,
-      title: "移動平均線【完全攻略】",
-      category: "環境整備 (詳細を見る)",
-      description: "「ハマ塾式 黄金インジ」を使いながら、実践で使える移動平均線を習得します",
-      srcImg: "/img/project6.jpg",
-      href: "https://hama-juku.thinkific.com/products/courses/moving-average",
-    },
-    {
-      id: 7,
-      title: "プライスアクション【完全攻略】",
-      category: "環境整備 (詳細を見る)",
-      description: "「ハマ塾式 梅と緑茶インジ」を使い、実践で通用するプライスアクションを身につけます",
-      srcImg: "/img/project7.jpg",
-      href: "https://hama-juku.thinkific.com/products/courses/price-action",
-    },
-  ],
 };
+
+export interface Lectures {
+  title: string;
+  preview: boolean;
+}
+
+export interface Sections {
+  title: string;
+  lectures: Lectures[];
+}
+
+export interface CoursePost {
+  slug: string;
+  publishedDate: string;
+  title: string;
+  excerpt: string;
+  benefit: string[];
+  image: string;
+  price: number;
+  alt: string;
+  url: string;
+  sections: Sections[];
+  categories: string[];
+}
+
+interface CoursePostsProps {
+  courses: CoursePost[];
+}
+
+const { courses } = Astro.props as CoursePostsProps;
 ---
 
 <section id="portfolio" class="relative bg-gray-100 py-16 md:py-20">
@@ -121,8 +119,8 @@ const portfolioData: PortfolioSectionProps = {
       </h2>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-      {portfolioData.portfolios2.map((portfolio) => (
-        <PortfolioCard portfolio={portfolio} />
+      {courses.map((course) => (
+        <PortfolioCard portfolio={course} />
       ))}
     </div>
   </div>

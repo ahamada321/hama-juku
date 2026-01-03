@@ -1,0 +1,52 @@
+---
+import Layout from '@src/layouts/Layout.astro';
+import HeadingCourse from '@components/HeadingCourse.astro';
+import CourseBenefit from '@components/CourseBenefit.astro';
+import CourseCurriculum from '@components/CourseCurriculum.astro';
+import ReviewsSection from '@components/ReviewsSection.astro';
+import CourseCTA from '@components/CourseCTA.astro';
+import { coursePosts } from '@src/data/CourseItems';
+
+export async function getStaticPaths() {
+  return coursePosts.map((post) => ({
+    params: { slug: post.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const post = coursePosts.find((p) => p.slug === slug);
+
+if (!post) {
+  return Astro.redirect('/404');
+}
+
+const relatedPosts = coursePosts
+  .filter((p) => p.slug !== slug && p.categories.some((cat) => post.categories.includes(cat)))
+  .slice(0, 3);
+---
+
+<Layout title={post.title} >
+  <HeadingCourse
+    title={post.title}
+    excerpt={post.excerpt}
+    image={post.image}
+    youtube={post.youtube}
+    price={post.price}
+  />
+  <CourseBenefit
+    title="コースの特徴"
+    benefit={post.benefit}
+  />
+  <CourseCurriculum
+    url={post.url}
+    sections={post.sections}
+   />
+  <CourseCTA
+    title="[30日間返金保証]"
+    description="プライスアクション完全攻略の第一歩をこのコースで踏み出しましょう"
+    url={post.url}
+    price={post.price}
+  />
+  <ReviewsSection />
+  <!-- <CourseDetail post={post} relatedPosts={relatedPosts} /> -->
+</Layout>

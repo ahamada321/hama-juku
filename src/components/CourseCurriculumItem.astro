@@ -1,0 +1,48 @@
+---
+interface Lectures {
+  title: string;
+  preview: boolean;
+}
+
+interface Props {
+  url: string;
+  title: string;
+  lectures: Lectures[];
+}
+
+const { url, title, lectures } = Astro.props;
+const icon = 'M19 9l-7 7-7-7';
+---
+
+<details
+  class="rounded-xl bg-white border border-black/10 shadow-sm group overflow-hidden"
+>
+  <summary
+    class="flex items-center justify-between py-4 px-6 cursor-pointer text-gray-800 font-semibold text-lg group-open:text-lime-600 group-open:bg-gray-100 transition-colors"
+  >
+    {title}
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-5 w-5 text-lime-400 group-open:rotate-180 transition-transform"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={icon} />
+    </svg>
+  </summary>
+  {lectures.map((lecture) => (
+  lecture.preview ? (
+    <a
+      href={`${url}?et=free_trial`}
+      class="block px-6 py-3 hover:underline hover:text-lime-500"
+    >
+      <span class="font-semibold text-lime-500">（無料プレビュー）　</span>{lecture.title}
+    </a>
+  ) : (
+    <div class="px-6 py-3 text-gray-600">
+      {lecture.title}
+    </div>
+    )
+  ))}
+</div>

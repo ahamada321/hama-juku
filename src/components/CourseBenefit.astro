@@ -1,0 +1,26 @@
+---
+interface Props {
+  title: string;
+  benefit: string[];
+}
+
+const { title, benefit } = Astro.props;
+---
+
+<section
+  id="course-benefit"
+  class="relative bg-white/70 backdrop-blur-md py-6 md:py-8 overflow-hidden"
+>
+  <div class="lg:max-w-7xl mx-auto px-6">
+    <div class="text-center">
+      <h2 class="text-3xl md:text-4xl font-semibold text-black py-4">{title}</h2>
+      {benefit.map((item) => (
+        <div class="mx-auto lg:max-w-2xl py-1">
+          <div class="bg-white rounded-xl border border-black/10 p-3">
+            <div class="post-content">・{item}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

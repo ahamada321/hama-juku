@@ -1,0 +1,70 @@
+---
+import Layout from '@src/layouts/Layout.astro';
+import HeadingPage from '@components/HeadingPage.astro';
+import AboutMe from '@components/AboutMe.astro';
+import OurValues from '@components/OurValues.astro';
+import CTA from '@components/CTA.astro';
+
+// Data AboutMe
+const aboutMeData = {
+  name: "Stefan Douman",
+  job: "Graphic Designer",
+  availability: true,
+  description:
+    "Stefan Douman began his creative journey over a decade ago, driven by a passion for transforming ideas into stunning visuals. Stefan has honed a unique approach that blends artistry with functionality. With over 5 years of experience in branding, UI/UX, and illustration, Stefan blends creativity with technology to deliver designs that not only look stunning but also solve real-world problems.",
+  tools: [
+    { name: "Figma", percentage: 90 },
+    { name: "Adobe Creative Suite", percentage: 85 },
+    { name: "Sketch", percentage: 80 },
+    { name: "Procreate", percentage: 75 },
+  ],
+  profileImage: "/img/profile.jpg",
+  screenImage: "/img/screen.jpg",
+};
+
+// Data OurValues
+const valuesData = [
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>`,
+    title: "Creativity",
+    description: "We push boundaries to deliver innovative designs that stand out and inspire.",
+  },
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>`,
+    title: "Collaboration",
+    description: "We work closely with clients to bring their visions to life with seamless teamwork.",
+  },
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>`,
+    title: "Excellence",
+    description: "We strive for perfection in every pixel, delivering top-tier quality every time.",
+  },
+];
+---
+
+<Layout title={`${aboutMeData.name} | ハマ塾`} >
+  <HeadingPage
+    title={aboutMeData.name}
+    description="Create extraordinary digital experiences with modern design and cutting-edge technology."
+  />
+  <AboutMe
+    name={aboutMeData.name}
+    job={aboutMeData.job}
+    availability={aboutMeData.availability}
+    description={aboutMeData.description}
+    tools={aboutMeData.tools}
+    profileImage={aboutMeData.profileImage}
+    screenImage={aboutMeData.screenImage}
+  />
+  <OurValues
+    title="Our Values"
+    description="The principles that guide every design we create, ensuring exceptional results for our clients."
+    values={valuesData}
+  />
+  <CTA
+    title="Ready to Collaborate?"
+    description="Let’s collaborate to bring your vision to life. Contact Stefan today to start your next project!"
+    ctaText="Contact Me"
+    ctaLink="/contact"
+  />
+</Layout>

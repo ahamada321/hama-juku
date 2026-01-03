@@ -1,0 +1,35 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  url: string;
+  price: number;
+}
+
+const { title, description, url, price } = Astro.props;
+---
+
+<section id="course-cta" class="relative bg-white/70 backdrop-blur-md py-8 md:py-10">
+  <div class="lg:max-w-7xl mx-auto px-6 relative text-center">
+    <h2 class="text-3xl md:text-4xl font-semibold text-black mb-3">{title}</h2>
+    <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-6">{description}</p>
+    
+    <div class="rounded-2xl bg-white p-6 border border-black/10 max-w-sm mx-auto">
+      <div class="flex justify-center items-baseline mb-4 gap-4">
+        <h3 class="text-2xl font-semibold text-black">¥ {new Intl.NumberFormat('ja-JP').format(price)}</h3>
+        <p class="text-gray-600">| 30日間返金保証付</p>
+      </div>
+      <div class="flex flex-col text-center gap-4">
+        <a
+          href={url}
+          class="nav-link py-4 rounded-xl font-semibold shadow-md text-gray-800 transition-all transform bg-lime-300 hover:bg-lime-400"
+        >カートに入れる</a>
+        <a
+          href={`${url}?et=free_trial`}
+          class="nav-link py-4 rounded-xl font-semibold shadow-md text-gray-800 transition-all transform bg-gray-100 hover:bg-gray-300"
+        >無料体験する</a>
+      </div>
+    </div>
+
+  </div>
+</section>

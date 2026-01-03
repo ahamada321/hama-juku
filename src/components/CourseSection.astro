@@ -1,0 +1,41 @@
+---
+import CourseCard from './CourseCard.astro';
+import Pagination from './Pagination.astro';
+
+interface CoursePost {
+  slug: string;
+  title: string;
+  excerpt: string;
+  image: string;
+  alt: string;
+  subtitle: string;
+  content: string;
+  categories: string[];
+}
+
+interface Props {
+  posts: CoursePost[];
+  currentPage: number;
+  totalPages: number;
+  baseUrl: string;
+}
+
+const { posts, currentPage, totalPages, baseUrl } = Astro.props;
+---
+
+<section id="courses" class="relative bg-white/70 backdrop-blur-md py-16 md:py-20 overflow-hidden">
+  <div class="lg:max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+      {posts.map((post) => (
+        <CourseCard
+          slug={post.slug}
+          title={post.title}
+          excerpt={post.excerpt}
+          image={post.image}
+          alt={post.alt}
+        />
+      ))}
+    </div>
+    <Pagination currentPage={currentPage} totalPages={totalPages} baseUrl={baseUrl} />
+  </div>
+</section>
