@@ -15,7 +15,11 @@ interface Props {
   <div class="max-w-4xl mx-auto px-6 lg:px-11">
     <div class="flex flex-col gap-6">
       <!-- Contact Form -->
-        <form action="/contact-success" method="POST" class="space-y-4" data-netlify="true" name="contact">
+        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4" data-netlify="true" name="contact">
+          <input type="hidden" name="access_key" value="29ba9429-b97f-4e58-b45d-20e82a55e4ff">
+          <input type="hidden" name="subject" value="お問い合わせが来ました | ハマ塾">
+          <input type="hidden" name="redirect" value="https://hama-juku.pages.dev/contact-success">
+
           <div>
             <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
             <input

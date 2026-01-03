@@ -31,10 +31,12 @@ const contactData: ContactSectionProps = {
         ></iframe>
       </div>
     </div>
-
     <div class="max-w-4xl mx-auto lg:px-11">
       <div class="flex flex-col gap-6">
-        <form action="/master-success" method="POST" class="bg-white rounded-xl p-8 shadow-lg border border-black/10" data-netlify="true" name="hamajuku-full">
+        <form action="https://api.web3forms.com/submit" method="POST" class="bg-white rounded-xl p-8 shadow-lg border border-black/10">
+          <input type="hidden" name="access_key" value="3466c754-339c-4c14-8e38-a856df90d669">
+          <input type="hidden" name="subject" value="ハマ塾フル版の相談申込です！| ハマ塾">
+          <input type="hidden" name="redirect" value="https://hama-juku.pages.dev/master-success">
           <div class="mb-6">
             <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">
               Name
