@@ -429,8 +429,7 @@ export const coursePosts: CoursePost[] = [
     slug: "price-action-complete-guide",
     publishedDate: "June 20, 2025",
     title: "プライスアクション【完全攻略】",
-    excerpt:
-      "ハマ塾「梅と緑茶インジ」で、プライスアクションの基礎から実践力まで一気に磨きます",
+    excerpt: "ハマ塾「梅と緑茶インジ」で、PAの基礎から実践力まで一気に磨きます",
     benefit: [
       "プロが使う独自の「ハマ塾 梅と緑茶インジゲーター」が手に入る",
       "プライスアクションについての理解が深まる",
