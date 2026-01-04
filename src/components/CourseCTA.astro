@@ -22,11 +22,11 @@ const { title, description, url, price } = Astro.props;
       <div class="flex flex-col text-center gap-4">
         <a
           href={url}
-          class="nav-link py-4 rounded-xl font-semibold shadow-md text-gray-800 transition-all transform bg-lime-300 hover:bg-lime-400"
+          class="nav-link py-4 rounded-xl font-semibold border border-black/10 shadow-sm text-gray-800 transition-all transform bg-lime-300 hover:bg-lime-400"
         >カートに入れる</a>
         <a
           href={`${url}?et=free_trial`}
-          class="nav-link py-4 rounded-xl font-semibold shadow-md text-gray-800 transition-all transform bg-gray-100 hover:bg-gray-300"
+          class="nav-link py-4 rounded-xl font-semibold border border-black/10 shadow-sm text-gray-800 transition-all transform bg-gray-100 hover:bg-gray-300"
         >無料プレビューを見る</a>
       </div>
     </div>
