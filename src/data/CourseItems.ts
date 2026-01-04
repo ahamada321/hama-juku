@@ -39,7 +39,7 @@ export const coursePosts: CoursePost[] = [
     price: 19800,
     alt: "TradingView【実践攻略】",
     url: "https://hama-juku.thinkific.com/enroll/3615334",
-    youtube: "https://www.youtube.com/embed/q5caut0Ht-M",
+    youtube: "https://www.youtube.com/embed/MFHEU2aj5S8",
     sections: [
       {
         title: "イントロダクション",
@@ -214,7 +214,7 @@ export const coursePosts: CoursePost[] = [
     price: 19800,
     alt: "移動平均線【完全攻略】",
     url: "https://hama-juku.thinkific.com/enroll/3513057",
-    youtube: "https://www.youtube.com/embed/q5caut0Ht-M",
+    youtube: "https://www.youtube.com/embed/CwmVN6pdko0",
     sections: [
       {
         title: "イントロダクション",
@@ -441,7 +441,7 @@ export const coursePosts: CoursePost[] = [
     price: 29800,
     alt: "プライスアクション【完全攻略】",
     url: "https://hama-juku.thinkific.com/enroll/3513135",
-    youtube: "https://www.youtube.com/embed/q5caut0Ht-M",
+    youtube: "https://www.youtube.com/embed/bG-cEP19ZIY",
     sections: [
       {
         title: "イントロダクション",
