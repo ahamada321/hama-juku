@@ -204,7 +204,7 @@ export const coursePosts: CoursePost[] = [
     publishedDate: "June 20, 2025",
     title: "移動平均線【完全攻略】",
     excerpt:
-      "ハマ塾「黄金インジ」入手し、移動平均線の基礎から実践力まで一気に磨きます",
+      "ハマ塾「黄金インジ」を入手し、移動平均線を学び、実用レベルまで底上げます",
     benefit: [
       "プロが使う独自の「ハマ塾 黄金インジゲーター」が手に入る",
       "移動平均線についての理解が深まり、実践で使えるようになる",
@@ -429,7 +429,8 @@ export const coursePosts: CoursePost[] = [
     slug: "price-action-complete-guide",
     publishedDate: "June 20, 2025",
     title: "プライスアクション【完全攻略】",
-    excerpt: "ハマ塾「梅と緑茶インジ」で、PAの基礎から実践力まで一気に磨きます",
+    excerpt:
+      "ハマ塾「梅と緑茶インジ」を入手し、PAの基礎から実践まで一気に習得します",
     benefit: [
       "プロが使う独自の「ハマ塾 梅と緑茶インジゲーター」が手に入る",
       "プライスアクションについての理解が深まる",
