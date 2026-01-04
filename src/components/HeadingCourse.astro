@@ -48,6 +48,11 @@ const { title, excerpt, image, youtube, price, position = "fixed" } = Astro.prop
         <div
           class="order-1 relative w-full rounded-xl border-[8px] border-black aspect-video overflow-hidden flex flex-col items-center justify-center"
         >
+          <img
+            src={image}
+            alt="Screen App"
+            class="absolute top-0 inset-x-0 w-full"
+          />
           <iframe
             src={youtube}
             class="absolute top-0 inset-x-0 w-full h-full rounded-sm"

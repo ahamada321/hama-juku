@@ -13,6 +13,7 @@ interface PortfolioCardProps {
 }
 
 const { portfolio } = Astro.props as PortfolioCardProps;
+const icon = 'M9 5l7 7-7 7';
 ---
 
 <a href={portfolio.slug ? "/course/" +portfolio.slug : portfolio.href}>
@@ -28,7 +29,20 @@ const { portfolio } = Astro.props as PortfolioCardProps;
     <div class="px-6 py-4">
       <h3 class="text-xl font-semibold text-black mb-1">{portfolio.title}</h3>
       <p class="text-gray-600 mb-3">{portfolio.excerpt}</p>
-      <p class="text-sm text-lime-500 uppercase">{portfolio.category}</p>
+      <div
+        class="text-lime-500 hover:text-lime-600 font-semibold text-sm transition-colors flex items-center gap-2"
+      >
+        詳細はこちら
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-4 w-4"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={icon} />
+        </svg>
+      </div>
     </div>
   </div>
 </a>
