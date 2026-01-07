@@ -89,7 +89,7 @@ interface CoursePostsProps {
 const { courses } = Astro.props as CoursePostsProps;
 ---
 
-<section id="portfolio" class="relative bg-gray-100 py-16 md:py-20">
+<section id="portfolio" class="relative bg-gray-100 py-8 md:py-20">
   <div class="lg:max-w-7xl mx-auto px-6">
     <div class="text-center mb-12">
       <h2 class="text-3xl md:text-4xl font-semibold text-black whitespace-nowrap">
@@ -101,7 +101,7 @@ const { courses } = Astro.props as CoursePostsProps;
         <PortfolioCard portfolio={portfolio} />
       ))}
     </div>
-    <div class="mt-16">
+    <div class="mt-8 md:mt-16">
       <h3 class="text-xl font-medium text-center mb-3 text-gray-600">Trusted By</h3>
       <div class="flex flex-wrap justify-center items-center gap-6">
         {portfolioData.trustedBy.map((logo) => (
@@ -113,7 +113,7 @@ const { courses } = Astro.props as CoursePostsProps;
         ))}
       </div>
     </div>
-    <div class="text-center mt-16 mb-12">
+    <div class="text-center mt-8 md:mt-16 mb-12">
       <h2 class="text-3xl md:text-4xl font-semibold text-black whitespace-nowrap">
         {portfolioData.title2}
       </h2>
