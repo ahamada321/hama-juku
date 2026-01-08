@@ -30,7 +30,6 @@ const aboutData: AboutSectionProps = {
   screenImg: '/img/student-voice.jpg',
   youtube: 'https://www.youtube.com/embed/mZ7Zf1GlvHU',
   title: 'ハマ塾フル版はこちら',
-  href: '#cta',
   availability: true,
 };
 ---
@@ -68,35 +67,19 @@ const aboutData: AboutSectionProps = {
             <div class="w-40 h-5 bg-gradient-to-b from-black to-gray-900 shadow-lg rounded-t-lg mx-auto"></div>
           </div>
         </div>
-        <a href={aboutData.href} data-scroll="smooth">
-          <div class="order-1 relative w-full rounded-xl border-[8px] border-black aspect-video overflow-hidden flex flex-col items-center justify-center">
-            <img
-              src={aboutData.screenImg}
-              alt="Screen App"
-              class="absolute top-0 inset-x-0 w-full"
-            />
-            <iframe
-              src={aboutData.youtube}
-              class="absolute top-0 inset-x-0 w-full h-full"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <!-- <div class="absolute inset-0 bg-black/60"></div>
-            <div class="relative size-20 sm:size-24 rounded-full overflow-hidden bg-white border-2 border-white mb-2">
-              <img src={aboutData.profileImg} alt={aboutData.name} class="w-full">
-            </div>
-
-            {aboutData.availability && (
-            <div class="relative flex items-center justify-center gap-2 mb-1">
-              <div class="size-3 bg-lime-500 rounded-full animate-pulse"></div>
-              <span class="text-sm text-white">最も結果が出しやすい</span>
-            </div>
-            )}
-            <h3 class="text-xl md:text-2xl font-semibold text-white relative">
-              {aboutData.title}
-            </h3> -->
-          </div>
-        </a>
+        <div class="order-1 relative w-full rounded-xl border-[8px] border-black aspect-video overflow-hidden flex flex-col items-center justify-center">
+          <img
+            src={aboutData.screenImg}
+            alt="Screen App"
+            class="absolute top-0 inset-x-0 w-full"
+          />
+          <iframe
+            src={aboutData.youtube}
+            class="absolute top-0 inset-x-0 w-full h-full"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
         <h3 class="about-perspective order-3 lg:mt-6 text-6xl text-center font-semibold text-gray-400 uppercase">
           受講生対談
         </h3>
