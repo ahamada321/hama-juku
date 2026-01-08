@@ -5,18 +5,15 @@ import Layout from '@src/layouts/Layout.astro';
 import HeroSection from '@components/HeroSection.astro';
 import ServicesSection from '@components/ServicesSection.astro';
 import AboutSection from '@components/AboutSection.astro';
-import PortfolioSection from '@components/PortfolioSection.astro';
 import ReviewsSection from '@components/ReviewsSection.astro';
 import CTA from '@components/CTA.astro';
 import FaqSection from '@components/FaqSection.astro';
-import { coursePosts } from '@src/data/CourseItems';
 ---
 
 <Layout>
   <HeroSection />
   <ServicesSection />
   <AboutSection />
-  <PortfolioSection courses={coursePosts} />
   <ReviewsSection />
   <CTA
     title="ハマ塾フル版 (完全版)"

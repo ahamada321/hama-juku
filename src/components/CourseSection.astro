@@ -1,6 +1,5 @@
 ---
 import CourseCard from './CourseCard.astro';
-import Pagination from './Pagination.astro';
 
 interface CoursePost {
   slug: string;
@@ -20,10 +19,15 @@ interface Props {
   baseUrl: string;
 }
 
-const { posts, currentPage, totalPages, baseUrl } = Astro.props;
+const { posts } = Astro.props;
 ---
 
-<section id="courses" class="relative bg-white/70 backdrop-blur-md py-16 md:py-20 overflow-hidden">
+<section id="courses" class="relative bg-white/70 backdrop-blur-md pt-8 md:pt-16 overflow-hidden">
+  <div class="text-center mb-12">
+    <h2 class="text-3xl md:text-4xl font-semibold text-black whitespace-nowrap">
+      【ハマ塾限定販売コース】
+    </h2>
+  </div>
   <div class="lg:max-w-7xl mx-auto px-6">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
       {posts.map((post) => (
@@ -36,6 +40,5 @@ const { posts, currentPage, totalPages, baseUrl } = Astro.props;
         />
       ))}
     </div>
-    <Pagination currentPage={currentPage} totalPages={totalPages} baseUrl={baseUrl} />
   </div>
 </section>

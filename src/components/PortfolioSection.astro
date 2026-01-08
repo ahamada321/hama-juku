@@ -14,11 +14,10 @@ export interface PortfolioSectionProps {
   title: string;
   portfolios: PortfolioItem[];
   trustedBy: { src: string; alt: string }[];
-  title2: string;
 }
 
 const portfolioData: PortfolioSectionProps = {
-  title: '① 基礎コース',
+  title: '【Udemy販売コース】',
   portfolios: [
     {
       title: "つみたて新NISA入門",
@@ -55,7 +54,6 @@ const portfolioData: PortfolioSectionProps = {
     { src: '/img/logo-institute.png', alt: 'Institute of Science Tokyo' },
     { src: '/img/logo-startup-hub.png', alt: 'Startup HUB Tokyo' },
   ],
-  title2: '② 勝つための環境整備',
 };
 
 export interface Lectures {
@@ -81,15 +79,9 @@ export interface CoursePost {
   sections: Sections[];
   categories: string[];
 }
-
-interface CoursePostsProps {
-  courses: CoursePost[];
-}
-
-const { courses } = Astro.props as CoursePostsProps;
 ---
 
-<section id="portfolio" class="relative bg-gray-100 py-8 md:py-20">
+<section id="portfolio" class="relative bg-white/70 backdrop-blur-md py-4 md:py-12">
   <div class="lg:max-w-7xl mx-auto px-6">
     <div class="text-center mb-12">
       <h2 class="text-3xl md:text-4xl font-semibold text-black whitespace-nowrap">
@@ -112,16 +104,6 @@ const { courses } = Astro.props as CoursePostsProps;
           />
         ))}
       </div>
-    </div>
-    <div class="text-center mt-8 md:mt-16 mb-12">
-      <h2 class="text-3xl md:text-4xl font-semibold text-black whitespace-nowrap">
-        {portfolioData.title2}
-      </h2>
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-      {courses.map((course) => (
-        <PortfolioCard portfolio={course} />
-      ))}
     </div>
   </div>
 </section>
