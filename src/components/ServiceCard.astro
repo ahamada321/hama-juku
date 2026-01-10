@@ -3,6 +3,7 @@ export interface ServiceCardProps {
   title: string;
   description: string;
   href: string;
+  slug: string;
   iconSvg: string;
 }
 
@@ -14,7 +15,9 @@ const { service } = Astro.props as ServiceCardData;
 const icon = 'M9 5l7 7-7 7';
 ---
 
-<a href={service.href || undefined}>
+<a href={service.href || service.slug}
+  {...(!service.href ? { "data-scroll": "smooth" } : {})}
+  >
   <div class={
     "rounded-3xl bg-white p-6 border border-black/10 " +
     (service.href
@@ -33,10 +36,9 @@ const icon = 'M9 5l7 7-7 7';
     </div>
     <h3 class="text-xl font-semibold text-black mb-2">{service.title}</h3>
     <p class="text-gray-600 mb-3">{service.description}</p>
-    {service.href ? (
       <div
         class="text-lime-600 hover:text-lime-500 font-semibold text-md transition-colors flex items-center gap-2">
-        詳細はこちら
+        {service.href ?  '詳細はこちら' : 'フル版とは？'}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-4 w-4"
@@ -46,6 +48,6 @@ const icon = 'M9 5l7 7-7 7';
         >
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={icon} />
         </svg>
-      </div>) : null}
+      </div>
   </div>
 </a>

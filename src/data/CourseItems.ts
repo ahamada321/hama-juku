@@ -27,7 +27,7 @@ export const coursePosts: CoursePost[] = [
   {
     slug: "tradingview-for-intermediate",
     publishedDate: "June 20, 2025",
-    title: "TradingView【実践攻略】",
+    title: "⑤TradingView【実践攻略】",
     excerpt:
       "無料機能に制限せず、本来の実力を最大限に引き出し、実践力を磨きます",
     benefit: [
@@ -202,7 +202,7 @@ export const coursePosts: CoursePost[] = [
   {
     slug: "moving-average",
     publishedDate: "June 20, 2025",
-    title: "移動平均線【完全攻略】",
+    title: "⑥移動平均線【完全攻略】",
     excerpt:
       "ハマ塾「黄金インジ」を入手し、移動平均線を基礎→実践で使える技術まで学びます",
     benefit: [
@@ -428,7 +428,7 @@ export const coursePosts: CoursePost[] = [
   {
     slug: "price-action-complete-guide",
     publishedDate: "June 20, 2025",
-    title: "プライスアクション【完全攻略】",
+    title: "⑦プライスアクション【完全攻略】",
     excerpt:
       "ハマ塾「梅と緑茶インジ」を入手し、PAの基礎から実践まで一気に習得します",
     benefit: [

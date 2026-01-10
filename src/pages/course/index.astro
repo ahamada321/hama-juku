@@ -17,11 +17,11 @@ const posts = coursePosts.slice(0, postsPerPage);
     title="① 基礎コースを学ぶ"
     description="投資の基礎を学び、実践に向けた下地を作ります"
   />
+  <PortfolioSection />
   <CourseSection
     posts={posts}
     currentPage={currentPage}
     totalPages={totalPages}
     baseUrl="/course/"
   />
-  <PortfolioSection />
 </Layout>
