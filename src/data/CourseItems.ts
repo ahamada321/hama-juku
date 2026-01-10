@@ -25,184 +25,9 @@ export interface CoursePost {
 
 export const coursePosts: CoursePost[] = [
   {
-    slug: "tradingview-for-intermediate",
-    publishedDate: "June 20, 2025",
-    title: "⑤TradingView【実践攻略】",
-    excerpt:
-      "無料機能に制限せず、本来の実力を最大限に引き出し、実践力を磨きます",
-    benefit: [
-      "マルチタイムフレーム分析の実践ノウハウを学びます",
-      "為替変動を考慮した株価チャート表示のノウハウを学びます",
-      "有料機能ならではの便利機能を学びます",
-    ],
-    image: "/img/project5.jpg",
-    price: 19800,
-    alt: "TradingView【実践攻略】",
-    url: "https://hama-juku.thinkific.com/enroll/3615334",
-    youtube: "https://www.youtube.com/embed/MFHEU2aj5S8",
-    sections: [
-      {
-        title: "イントロダクション",
-        lectures: [
-          {
-            title: "コースPV",
-            preview: true,
-          },
-          {
-            title: "（スキップOK）ハマ塾基本操作",
-            preview: true,
-          },
-        ],
-      },
-      {
-        title: "有料版レイアウト機能の使い方",
-        lectures: [
-          {
-            title: "イントロ",
-            preview: true,
-          },
-          {
-            title: "料金プランの違い",
-            preview: true,
-          },
-          {
-            title: "複数のチャートを同時表示できるメリット",
-            preview: true,
-          },
-          {
-            title: "複数の時間足で表示するメリット",
-            preview: true,
-          },
-          {
-            title: "レイアウトのコピー方法",
-            preview: true,
-          },
-          {
-            title: "レイアウトを複数作る方法",
-            preview: true,
-          },
-          {
-            title: "時間足の同期方法",
-            preview: true,
-          },
-          {
-            title: "日付範囲の同期方法",
-            preview: false,
-          },
-          {
-            title: "日時の同期方法",
-            preview: false,
-          },
-          {
-            title: "シンボルの同期方法",
-            preview: false,
-          },
-          {
-            title: "レイアウトのお気に入り登録と削除方法",
-            preview: false,
-          },
-          {
-            title: "レイアウトを削除する方法",
-            preview: false,
-          },
-          {
-            title: "気に入り追加したレイアウトにアイコンを設定する方法",
-            preview: false,
-          },
-          {
-            title: "描画の同期方法",
-            preview: false,
-          },
-        ],
-      },
-      {
-        title: "インジゲーターの活用方法",
-        lectures: [
-          {
-            title: "イントロ",
-            preview: false,
-          },
-          {
-            title: "複数のインジケーターを組み合わせる威力について",
-            preview: false,
-          },
-          {
-            title: "インジケーターテンプレートの作り方",
-            preview: false,
-          },
-          {
-            title: "インジケーターテンプレートを開く際に時間軸を指定する方法",
-            preview: false,
-          },
-          {
-            title: "インジケーターテンプレートを開く際にシンボルを指定する方法",
-            preview: false,
-          },
-          {
-            title: "インジケーターまとめ",
-            preview: false,
-          },
-        ],
-      },
-      {
-        title: "有料版リプレイ機能の活用方法",
-        lectures: [
-          {
-            title: "バーリプレイの使い方",
-            preview: false,
-          },
-          {
-            title: "日足より短い時間足でバーリプレイできる",
-            preview: false,
-          },
-          {
-            title: "複数時間足でバーリプレイを行う方法",
-            preview: false,
-          },
-        ],
-      },
-      {
-        title: "アラート機能の活用方法",
-        lectures: [
-          {
-            title: "価格アラートの使い方",
-            preview: false,
-          },
-          {
-            title: "テクニカルアラートの使い方",
-            preview: false,
-          },
-          {
-            title: "ウォッチリストアラートの使い方",
-            preview: false,
-          },
-        ],
-      },
-      {
-        title: "カスタム計算式の活用方法",
-        lectures: [
-          {
-            title: "カスタム計算式の使い方",
-            preview: false,
-          },
-        ],
-      },
-      {
-        title: "次のステップへ向けて",
-        lectures: [
-          {
-            title: "次のステップへ向けて",
-            preview: false,
-          },
-        ],
-      },
-    ],
-    categories: ["実践編"],
-  },
-  {
     slug: "moving-average",
     publishedDate: "June 20, 2025",
-    title: "⑥移動平均線【完全攻略】",
+    title: "⑤ 移動平均線【完全攻略】",
     excerpt:
       "ハマ塾「黄金インジ」を入手し、移動平均線を基礎→実践で使える技術まで学びます",
     benefit: [
@@ -428,7 +253,7 @@ export const coursePosts: CoursePost[] = [
   {
     slug: "price-action-complete-guide",
     publishedDate: "June 20, 2025",
-    title: "⑦プライスアクション【完全攻略】",
+    title: "⑥ プライスアクション【完全攻略】",
     excerpt:
       "ハマ塾「梅と緑茶インジ」を入手し、PAの基礎から実践まで一気に習得します",
     benefit: [
@@ -559,6 +384,181 @@ export const coursePosts: CoursePost[] = [
       {
         title: "次のステップへ向けて",
         lectures: [{ title: "次のステップ", preview: false }],
+      },
+    ],
+    categories: ["実践編"],
+  },
+  {
+    slug: "tradingview-for-intermediate",
+    publishedDate: "June 20, 2025",
+    title: "⑦ TradingView【応用】",
+    excerpt:
+      "無料機能に制限せず、本来の実力を最大限に引き出し、実践力を磨きます",
+    benefit: [
+      "マルチタイムフレーム分析の実践ノウハウを学びます",
+      "為替変動を考慮した株価チャート表示のノウハウを学びます",
+      "有料機能ならではの便利機能を学びます",
+    ],
+    image: "/img/project5.jpg",
+    price: 19800,
+    alt: "TradingView【実践攻略】",
+    url: "https://hama-juku.thinkific.com/enroll/3615334",
+    youtube: "https://www.youtube.com/embed/MFHEU2aj5S8",
+    sections: [
+      {
+        title: "イントロダクション",
+        lectures: [
+          {
+            title: "コースPV",
+            preview: true,
+          },
+          {
+            title: "（スキップOK）ハマ塾基本操作",
+            preview: true,
+          },
+        ],
+      },
+      {
+        title: "有料版レイアウト機能の使い方",
+        lectures: [
+          {
+            title: "イントロ",
+            preview: true,
+          },
+          {
+            title: "料金プランの違い",
+            preview: true,
+          },
+          {
+            title: "複数のチャートを同時表示できるメリット",
+            preview: true,
+          },
+          {
+            title: "複数の時間足で表示するメリット",
+            preview: true,
+          },
+          {
+            title: "レイアウトのコピー方法",
+            preview: true,
+          },
+          {
+            title: "レイアウトを複数作る方法",
+            preview: true,
+          },
+          {
+            title: "時間足の同期方法",
+            preview: true,
+          },
+          {
+            title: "日付範囲の同期方法",
+            preview: false,
+          },
+          {
+            title: "日時の同期方法",
+            preview: false,
+          },
+          {
+            title: "シンボルの同期方法",
+            preview: false,
+          },
+          {
+            title: "レイアウトのお気に入り登録と削除方法",
+            preview: false,
+          },
+          {
+            title: "レイアウトを削除する方法",
+            preview: false,
+          },
+          {
+            title: "気に入り追加したレイアウトにアイコンを設定する方法",
+            preview: false,
+          },
+          {
+            title: "描画の同期方法",
+            preview: false,
+          },
+        ],
+      },
+      {
+        title: "インジゲーターの活用方法",
+        lectures: [
+          {
+            title: "イントロ",
+            preview: false,
+          },
+          {
+            title: "複数のインジケーターを組み合わせる威力について",
+            preview: false,
+          },
+          {
+            title: "インジケーターテンプレートの作り方",
+            preview: false,
+          },
+          {
+            title: "インジケーターテンプレートを開く際に時間軸を指定する方法",
+            preview: false,
+          },
+          {
+            title: "インジケーターテンプレートを開く際にシンボルを指定する方法",
+            preview: false,
+          },
+          {
+            title: "インジケーターまとめ",
+            preview: false,
+          },
+        ],
+      },
+      {
+        title: "有料版リプレイ機能の活用方法",
+        lectures: [
+          {
+            title: "バーリプレイの使い方",
+            preview: false,
+          },
+          {
+            title: "日足より短い時間足でバーリプレイできる",
+            preview: false,
+          },
+          {
+            title: "複数時間足でバーリプレイを行う方法",
+            preview: false,
+          },
+        ],
+      },
+      {
+        title: "アラート機能の活用方法",
+        lectures: [
+          {
+            title: "価格アラートの使い方",
+            preview: false,
+          },
+          {
+            title: "テクニカルアラートの使い方",
+            preview: false,
+          },
+          {
+            title: "ウォッチリストアラートの使い方",
+            preview: false,
+          },
+        ],
+      },
+      {
+        title: "カスタム計算式の活用方法",
+        lectures: [
+          {
+            title: "カスタム計算式の使い方",
+            preview: false,
+          },
+        ],
+      },
+      {
+        title: "次のステップへ向けて",
+        lectures: [
+          {
+            title: "次のステップへ向けて",
+            preview: false,
+          },
+        ],
       },
     ],
     categories: ["実践編"],
