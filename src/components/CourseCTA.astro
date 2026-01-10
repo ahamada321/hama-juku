@@ -3,10 +3,11 @@ interface Props {
   title: string;
   description: string;
   url: string;
+  salePrice: number;
   price: number;
 }
 
-const { title, description, url, price } = Astro.props;
+const { title, description, url, salePrice, price } = Astro.props;
 ---
 
 <section id="course-cta" class="relative bg-white/70 backdrop-blur-md py-8 md:py-10">
@@ -16,8 +17,8 @@ const { title, description, url, price } = Astro.props;
     
     <div class="rounded-2xl bg-white p-6 border border-black/10 max-w-sm mx-auto">
       <div class="flex justify-center items-baseline mb-4 gap-4">
-        <h3 class="text-3xl font-semibold text-black">¥ {new Intl.NumberFormat('ja-JP').format(price)}</h3>
-        <p class="text-gray-600">| 30日間返金保証付</p>
+        <h3 class="text-3xl font-semibold text-black">¥ {new Intl.NumberFormat('ja-JP').format(salePrice)}</h3>
+        <p class="text-gray-500">| <del>¥{new Intl.NumberFormat('ja-JP').format(price)}</del></p>
       </div>
       <div class="flex flex-col text-center gap-4">
         <a

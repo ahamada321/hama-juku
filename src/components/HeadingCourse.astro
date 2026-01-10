@@ -7,11 +7,10 @@ interface Props {
   excerpt: string;
   image: string;
   youtube: string;
-  price: number;
   position?: 'absolute' | 'fixed';
 }
 
-const { title, excerpt, image, youtube, price, position = "fixed" } = Astro.props;
+const { title, excerpt, image, youtube, position = "fixed" } = Astro.props;
 ---
 
 <section

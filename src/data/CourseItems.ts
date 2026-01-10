@@ -15,6 +15,7 @@ export interface CoursePost {
   excerpt: string;
   benefit: string[];
   image: string;
+  salePrice: number;
   price: number;
   alt: string;
   url: string;
@@ -36,7 +37,8 @@ export const coursePosts: CoursePost[] = [
       "複数のMAを使ったエントリー / 利確手法が学べる",
     ],
     image: "/img/project6.jpg",
-    price: 19800,
+    salePrice: 29800,
+    price: 49800,
     alt: "移動平均線【完全攻略】",
     url: "https://hama-juku.thinkific.com/enroll/3513057",
     youtube: "https://www.youtube.com/embed/CwmVN6pdko0",
@@ -263,7 +265,8 @@ export const coursePosts: CoursePost[] = [
       "「梅と緑茶インジ」とSMCをフル活用した実践トレードが学べる",
     ],
     image: "/img/project7.jpg",
-    price: 29800,
+    salePrice: 29800,
+    price: 49800,
     alt: "プライスアクション【完全攻略】",
     url: "https://hama-juku.thinkific.com/enroll/3513135",
     youtube: "https://www.youtube.com/embed/bG-cEP19ZIY",
@@ -400,8 +403,9 @@ export const coursePosts: CoursePost[] = [
       "有料機能ならではの便利機能を学びます",
     ],
     image: "/img/project5.jpg",
-    price: 19800,
-    alt: "TradingView【実践攻略】",
+    salePrice: 19800,
+    price: 39800,
+    alt: "TradingView【応用】",
     url: "https://hama-juku.thinkific.com/enroll/3615334",
     youtube: "https://www.youtube.com/embed/MFHEU2aj5S8",
     sections: [
