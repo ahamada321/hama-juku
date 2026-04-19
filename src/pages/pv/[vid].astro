@@ -1,0 +1,64 @@
+---
+import Layout from '@src/layouts/Layout.astro';
+import VideoSection from '@components/VideoSection.astro';
+import { coursePosts } from '@src/data/CourseItems';
+
+export async function getStaticPaths() {
+  return coursePosts.flatMap((post) =>
+    post.sections.flatMap((section) =>
+      section.lectures.map((lecture) => ({
+        params: {
+          vid: lecture._id,
+        },
+      }))
+    )
+  );
+}
+
+const { vid } = Astro.params;
+let target = null;
+
+outer:
+for (const post of coursePosts) {
+  for (const section of post.sections) {
+    const lecture = section.lectures.find(l => l._id === vid);
+    if (lecture) {
+      target = { post, section, lecture };
+      break outer;
+    }
+  }
+}
+
+if (!target) {
+  return Astro.redirect('/404');
+}
+
+const { post, section, lecture } = target;
+const lectures = post.sections.flatMap(s => s.lectures);
+const currentIndex = lectures.indexOf(lecture);
+
+if (currentIndex === -1) {
+  return Astro.redirect('/404');
+}
+
+const prevLecture = lectures[currentIndex - 1] ?? null;
+const nextLecture = lectures[currentIndex + 1] ?? null;
+---
+
+<Layout title={lecture.title}>
+  <div class="relative bg-gray-100 pb-4 pt-20 md:pt-28 overflow-hidden">
+    <div class="lg:max-w-7xl mx-auto px-6">
+      <div class="text-center">
+        <h1 class="text-3xl md:text-4xl font-semibold text-black">{lecture.title}</h1>
+      </div>
+    </div>
+  </div>
+  <VideoSection
+    lecture={lecture}
+    prevPage={prevLecture?._id}
+    nextPage={nextLecture?._id}
+    nextPrev={nextLecture?.preview}
+    slug={post.slug}
+    paid={false}
+  />
+</Layout>

@@ -2,6 +2,7 @@
 import CourseCurriculumItem from './CourseCurriculumItem.astro';
 
 interface Lectures {
+  _id: string;
   title: string;
   preview: boolean;
 }
@@ -12,11 +13,11 @@ interface Sections {
 }
 
 interface Props {
-  url: string;
+  paid: boolean;
   sections: Sections[];
 }
 
-const { url, sections } = Astro.props;
+const { paid, sections } = Astro.props;
 ---
 
 <section id="curriculum" class="relative bg-white/70 backdrop-blur-md py-6 md:py-8 overflow-hidden">
@@ -27,7 +28,7 @@ const { url, sections } = Astro.props;
     </div>
     <div class="max-w-4xl lg:px-10 mx-auto space-y-4">
       {sections.map((section) => (
-        <CourseCurriculumItem url={url} title={section.title} lectures={section.lectures} />
+        <CourseCurriculumItem paid={paid} title={section.title} lectures={section.lectures} />
       ))}
     </div>
   </div>

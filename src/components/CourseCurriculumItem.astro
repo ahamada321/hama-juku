@@ -1,20 +1,22 @@
 ---
 interface Lectures {
+  _id: string;
   title: string;
   preview: boolean;
 }
 
 interface Props {
-  url: string;
+  paid: boolean;
   title: string;
   lectures: Lectures[];
 }
 
-const { url, title, lectures } = Astro.props;
+const { paid, title, lectures } = Astro.props;
 const icon = 'M19 9l-7 7-7-7';
 ---
 
 <details
+  open={paid}
   class="rounded-xl bg-white border border-black/10 shadow-sm group overflow-hidden"
 >
   <summary
@@ -32,10 +34,17 @@ const icon = 'M19 9l-7 7-7-7';
     </svg>
   </summary>
   {lectures.map((lecture) => (
-  lecture.preview ? (
+  paid ? (
     <a
-      href={`${url}?et=free_trial`}
-      class="block px-6 py-3 hover:underline hover:text-lime-500"
+      href={`/pd/${lecture._id}`}
+      class="block px-6 py-3 text-gray-600 hover:underline hover:text-lime-500"
+    >
+      {lecture.title}
+    </a>
+  ) : lecture.preview ? (
+    <a
+      href={`/pv/${lecture._id}`}
+      class="block px-6 py-3 text-gray-600 hover:underline hover:text-lime-500"
     >
       <span class="font-semibold text-lime-500">（無料プレビュー）　</span>{lecture.title}
     </a>
@@ -45,4 +54,4 @@ const icon = 'M19 9l-7 7-7-7';
     </div>
     )
   ))}
-</div>
+</details>

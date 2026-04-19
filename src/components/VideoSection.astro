@@ -1,0 +1,38 @@
+---
+import VideoPagination from '@components/VideoPagination.astro';
+
+interface Lecture {
+  _id: string;
+  title: string;
+  preview: boolean;
+  url: string;
+  memo: string;
+}
+
+interface Props {
+  lecture: Lecture;
+  prevPage: string;
+  nextPage: string;
+  nextPrev: boolean;
+  slug: string;
+  paid: boolean;
+}
+
+const { lecture, prevPage, nextPage, nextPrev, slug, paid } = Astro.props;
+---
+
+<section id="video" class="relative bg-white/70 backdrop-blur-md py-6 pb-12 overflow-hidden">
+  <div class="max-w-4xl lg:px-10 mx-auto space-y-8">
+    <div
+      class="order-1 relative w-full rounded-xl border-[2px] aspect-video overflow-hidden flex flex-col items-center justify-center"
+    >
+      <iframe
+        src={lecture.url}
+        class="absolute top-0 inset-x-0 w-full h-full"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <VideoPagination prevPage={prevPage} nextPage={nextPage} nextPrev={nextPrev} slug={slug} paid={paid} />
+  </div>
+</section>

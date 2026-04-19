@@ -1,0 +1,54 @@
+---
+interface Props {
+  prevPage: string;
+  nextPage: string;
+  nextPrev: boolean;
+  slug: string;
+  paid: boolean;
+}
+
+const { prevPage, nextPage, nextPrev, slug, paid } = Astro.props;
+const state = paid ? 'pd' : 'pv';
+const prevIcon = 'M15 19l-7-7 7-7';
+const nextIcon = 'M9 5l7 7-7 7';
+---
+
+<div class="flex justify-center gap-2">
+  <!-- Previous Button -->
+  <a
+    href={prevPage ? `/${state}/${prevPage}` : '#'}
+    class={`flex items-center justify-center w-10 h-10 rounded-full ${prevPage ? 'bg-gray-200 hover:bg-lime-300 hover:text-gray-800' : 'bg-gray-200 text-gray-600 cursor-not-allowed'} transition-colors`}
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-5 w-5"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={prevIcon} />
+    </svg>
+  </a>
+  <!-- Page Numbers -->
+    <a
+      href={paid ? `/${state}/${slug}` : `/course/${slug}`}
+      class={`flex items-center justify-center w-20 h-10 rounded-full bg-lime-300 text-gray-800 font-semibold transition-colors`}
+    >
+      戻る
+    </a>
+  <!-- Next Button -->
+  <a
+    href={nextPage && (paid || (!paid && nextPrev)) ? `/${state}/${nextPage}` : `/course/${slug}`}
+    class={`flex items-center justify-center w-10 h-10 rounded-full ${nextPage ? 'bg-gray-200 hover:bg-lime-300 hover:text-gray-800' : 'bg-gray-200 text-gray-600 cursor-not-allowed'} transition-colors`}
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-5 w-5"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={nextIcon} />
+    </svg>
+  </a>
+</div>
