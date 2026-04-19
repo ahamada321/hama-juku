@@ -31,7 +31,7 @@ export const coursePosts: CoursePost[] = [
   {
     slug: "ma",
     publishedDate: "June 20, 2025",
-    title: "⑤ 移動平均線【完全攻略】",
+    title: "【本質を理解する】移動平均線（SMA／EMA）完全攻略",
     excerpt:
       "ハマ塾「黄金インジ」を入手し、移動平均線を基礎→実践で使える技術まで学びます",
     benefit: [
@@ -42,7 +42,7 @@ export const coursePosts: CoursePost[] = [
     image: "/img/project6.jpg",
     salePrice: 29800,
     price: 49800,
-    alt: "移動平均線【完全攻略】",
+    alt: "【本質を理解する】移動平均線（SMA／EMA）完全攻略",
     url: "https://www.paypal.com/ncp/payment/FEB8GSZYNBPTY",
     youtube: "https://www.youtube.com/embed/CwmVN6pdko0",
     sections: [
@@ -379,9 +379,240 @@ export const coursePosts: CoursePost[] = [
     categories: ["実践編"],
   },
   {
+    slug: "va",
+    publishedDate: "April 20, 2026",
+    title: "出来高を学び、極める。VPA (Volume Price Analysis)完全攻略",
+    excerpt:
+      "出来高・価格帯別出来高・出来高加重平均を学び、エントリー/利確精度を高める方法を学びます",
+    benefit: [
+      "出来高とは何かを理解し、正しく読み取れるようになる",
+      "出来高分析（VPA）を実践トレードに活かす方法を学べる",
+      "価格帯別出来高を学び、実践トレードに活かす方法を学べる",
+      "出来高加重平均価格(VWAP)について学べる",
+      "ハマ塾限定「出来高加重ローソク足」インジも手に入る",
+    ],
+    image: "/img/project4.png",
+    salePrice: 29800,
+    price: 49800,
+    alt: "出来高を学び、極める。VPA (Volume Price Analysis)完全攻略",
+    url: "https://www.paypal.com/ncp/payment/3ZLUXE7XXRNEG",
+    youtube: "https://www.youtube.com/embed/T3LqheDIXis",
+    sections: [
+      {
+        title: "イントロダクション",
+        lectures: [
+          {
+            _id: "T3LqheDIXis",
+            title: "なぜ「出来高」を学ぶのか？",
+            preview: true,
+            url: "https://www.youtube.com/embed/T3LqheDIXis",
+            memo: "",
+          },
+          {
+            _id: "T3LqheDIXis",
+            title: "限定特典「出来高加重ローソク足」インジとは？",
+            preview: true,
+            url: "https://www.youtube.com/embed/T3LqheDIXis",
+            memo: "",
+          },
+          {
+            _id: "ma-2",
+            title: "ハマ塾「基本操作ガイド」",
+            preview: true,
+            url: "https://www.youtube.com/embed/",
+            memo: "",
+          },
+        ],
+      },
+      {
+        title: "「出来高（Volume）」とは？",
+        lectures: [
+          {
+            _id: "ypy8DxPI7Uc",
+            title: "「出来高（Volume）」とは？",
+            preview: true,
+            url: "https://www.youtube.com/embed/ypy8DxPI7Uc",
+            memo: "",
+          },
+          {
+            _id: "EUybqUWboW4",
+            title: "押し目買い・戻り売りのタイミングを見極める方法",
+            preview: true,
+            url: "https://www.youtube.com/embed/EUybqUWboW4",
+            memo: "",
+          },
+        ],
+      },
+      {
+        title: "出来高から利確タイミングを見極める方法",
+        lectures: [
+          {
+            _id: "vq8BCqdvkxU",
+            title: "出来高から「絶好の」利確タイミングを見極める方法",
+            preview: false,
+            url: "https://www.youtube.com/embed/vq8BCqdvkxU",
+            memo: "",
+          },
+          {
+            _id: "SHlwgMrWDx8",
+            title: "出来高の増減から「バブル」に気づく方法",
+            preview: false,
+            url: "https://www.youtube.com/embed/SHlwgMrWDx8",
+            memo: "",
+          },
+          {
+            _id: "zRDtIXDB_7M",
+            title: "トレンドの終焉を出来高から予想する方法",
+            preview: false,
+            url: "https://www.youtube.com/embed/zRDtIXDB_7M",
+            memo: "",
+          },
+          {
+            _id: "jCnatYG0ME0",
+            title: "高値圏での利確精度の高め方",
+            preview: false,
+            url: "https://www.youtube.com/embed/jCnatYG0ME0",
+            memo: "",
+          },
+        ],
+      },
+      {
+        title: "出来高を参考に上昇トレンドに上手に乗る方法",
+        lectures: [
+          {
+            _id: "hKpqajWIPWA",
+            title: "出来高を参考に上昇トレンドに「上手に」乗る方法",
+            preview: false,
+            url: "https://www.youtube.com/embed/hKpqajWIPWA",
+            memo: "",
+          },
+          {
+            _id: "3WYzyt8L1vg",
+            title: "「Buyingクライマックス」に乗って利確する方法",
+            preview: false,
+            url: "https://www.youtube.com/embed/3WYzyt8L1vg",
+            memo: "",
+          },
+        ],
+      },
+      {
+        title: "出来高からエントリータイミングを見極める方法",
+        lectures: [
+          {
+            _id: "zy9ngsPMr0I",
+            title: "出来高からエントリータイミングを見極める方法",
+            preview: false,
+            url: "https://www.youtube.com/embed/zy9ngsPMr0I",
+            memo: "",
+          },
+          {
+            _id: "Nm85RD-gMMs",
+            title: "絶好の安値圏でエントリーする方法",
+            preview: false,
+            url: "https://www.youtube.com/embed/Nm85RD-gMMs",
+            memo: "",
+          },
+          {
+            _id: "tWXpZUHUG6E",
+            title: "10年に1度の安値圏でエントリーする方法",
+            preview: false,
+            url: "https://www.youtube.com/embed/tWXpZUHUG6E",
+            memo: "",
+          },
+        ],
+      },
+      {
+        title: "出来高加重平均価格（VWAP）を使いこなそう",
+        lectures: [
+          {
+            _id: "bHFZ8fkN-iQ",
+            title: "出来高加重平均価格（VWAP）とは？",
+            preview: false,
+            url: "https://www.youtube.com/embed/bHFZ8fkN-iQ",
+            memo: "",
+          },
+          {
+            _id: "rMXKBj6riSQ",
+            title: "ダブルトップ（水平線）が機能する理由",
+            preview: false,
+            url: "https://www.youtube.com/embed/rMXKBj6riSQ",
+            memo: "",
+          },
+          {
+            _id: "BrszwBmhu_U",
+            title: "そもそも移動平均線が機能する理由",
+            preview: false,
+            url: "https://www.youtube.com/embed/BrszwBmhu_U",
+            memo: "",
+          },
+          {
+            _id: "4WnfvLX8wXk",
+            title: "移動平均線にはないVWAPの強みとは？",
+            preview: false,
+            url: "https://www.youtube.com/embed/4WnfvLX8wXk",
+            memo: "",
+          },
+          {
+            _id: "DMK4vSalWX0",
+            title: "VWAPを実際に使ってみよう",
+            preview: false,
+            url: "https://www.youtube.com/embed/DMK4vSalWX0",
+            memo: "",
+          },
+          {
+            _id: "el6sB0O-YdY",
+            title: "VWAPの実践的な使い方",
+            preview: false,
+            url: "https://www.youtube.com/embed/el6sB0O-YdY",
+            memo: "",
+          },
+        ],
+      },
+      {
+        title: "価格帯別出来高（出来高プロファイル）を使いこなす方法",
+        lectures: [
+          {
+            _id: "-ljveicWHe4",
+            title: "価格帯別出来高（出来高プロファイル）とは？",
+            preview: false,
+            url: "https://www.youtube.com/embed/-ljveicWHe4",
+            memo: "",
+          },
+          {
+            _id: "jEhxYOubxgI",
+            title: "価格帯別出来高(出来高プロファイル)の使い方",
+            preview: false,
+            url: "https://www.youtube.com/embed/jEhxYOubxgI",
+            memo: "",
+          },
+          {
+            _id: "ZikJt2xEeJk",
+            title: "固定期間出来高プロファイル(FRVP)の使い方",
+            preview: false,
+            url: "https://www.youtube.com/embed/ZikJt2xEeJk",
+            memo: "",
+          },
+        ],
+      },
+      {
+        title: "次のステップへ向けて",
+        lectures: [
+          {
+            _id: "ma-41",
+            title: "学んだことの振り返り",
+            preview: false,
+            url: "https://www.youtube.com/embed/CwmVN6pdko0",
+            memo: "",
+          },
+        ],
+      },
+    ],
+    categories: ["実践編"],
+  },
+  {
     slug: "pa",
     publishedDate: "June 20, 2025",
-    title: "⑥ プライスアクション【完全攻略】",
+    title: "【ローソク足から学ぶ】プライスアクション完全攻略",
     excerpt:
       "ハマ塾「梅と緑茶インジ」を入手し、PAの基礎から実践まで一気に習得します",
     benefit: [
@@ -394,7 +625,7 @@ export const coursePosts: CoursePost[] = [
     salePrice: 29800,
     price: 49800,
     alt: "プライスアクション【完全攻略】",
-    url: "https://hama-juku.thinkific.com/enroll/3513135",
+    url: "https://www.paypal.com/ncp/payment/WCXKQXNDYPNAA",
     youtube: "https://www.youtube.com/embed/bG-cEP19ZIY",
     sections: [
       {
