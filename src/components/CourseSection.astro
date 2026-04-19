@@ -27,7 +27,7 @@ const { posts } = Astro.props;
     </h2>
   </div>
   <div class="lg:max-w-7xl mx-auto px-6">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       {posts.map((post) => (
         <CourseCard
           slug={post.slug}
@@ -39,7 +39,7 @@ const { posts } = Astro.props;
       ))}
     </div>
   </div>
-  <div class="lg:max-w-7xl mx-auto p-16 relative text-center">
+  <div class="lg:max-w-7xl mx-auto p-18 relative text-center">
     <a
       href="/"
       class="nav-link bg-lime-300 text-gray-800 border-2 border-black/10 shadow-sm px-8 py-4 rounded-full font-semibold hover:bg-lime-400 transition-all transform"
