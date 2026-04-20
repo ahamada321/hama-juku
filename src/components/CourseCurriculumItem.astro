@@ -37,7 +37,7 @@ const icon = 'M19 9l-7 7-7-7';
   paid ? (
     <a
       href={`/pd/${lecture._id}`}
-      class="block px-6 py-3 text-gray-600 hover:underline hover:text-lime-500"
+      class="block px-6 py-3 text-gray-600 hover:underline hover:text-lime-500 visited:text-gray-400"
     >
       {lecture.title}
     </a>
@@ -46,7 +46,7 @@ const icon = 'M19 9l-7 7-7-7';
       href={`/pv/${lecture._id}`}
       class="block px-6 py-3 text-gray-600 hover:underline hover:text-lime-500"
     >
-      <span class="font-semibold text-lime-500">（無料プレビュー）　</span>{lecture.title}
+      <span class="font-semibold text-lime-500">（無料視聴できます）</span>{lecture.title}
     </a>
   ) : (
     <div class="px-6 py-3 text-gray-600">

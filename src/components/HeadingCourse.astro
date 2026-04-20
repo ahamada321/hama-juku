@@ -34,7 +34,7 @@ const { paid = false, title, excerpt, image, youtube, position = "fixed" } = Ast
         >購入済み</div>
         )}
         <h2 class="text-3xl md:text-4xl font-semibold text-black mt-3 mb-3">{title}</h2>
-        <p class="text-gray-700 text-lg mb-4">{excerpt}</p>
+        <p class="text-gray-700 text-lg mb-4">{ paid ? 'カリキュラムの各セクション内の講義名をクリックすることで動画を視聴できます' : excerpt }</p>
       </div>
       <!-- Monitor Section -->
       <div class="lg:order-2 flex flex-col lg:px-10 lg:ps-16">

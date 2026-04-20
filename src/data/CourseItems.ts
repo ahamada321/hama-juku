@@ -33,9 +33,9 @@ export const coursePosts: CoursePost[] = [
     publishedDate: "June 20, 2025",
     title: "【本質を理解する】移動平均線（SMA／EMA）完全攻略",
     excerpt:
-      "ハマ塾「黄金インジ」を入手し、移動平均線を基礎→実践で使える技術まで学びます",
+      "ハマ塾「波インジ」を入手し、移動平均線を基礎→実践で使える技術まで学びます",
     benefit: [
-      "プロが使う独自の「ハマ塾 黄金インジゲーター」が手に入る",
+      "プロが使う独自の「ハマ塾 波インジゲーター」が手に入る",
       "移動平均線についての理解が深まり、実践で使えるようになる",
       "複数のMAを使ったエントリー / 利確手法が学べる",
     ],
@@ -93,63 +93,63 @@ export const coursePosts: CoursePost[] = [
             _id: "ma-6",
             title:
               "（課題）いろんな期間の移動平均線が表示できることを確認しよう",
-            preview: true,
+            preview: false,
             url: "https://www.youtube.com/embed/CwmVN6pdko0",
             memo: "",
           },
           {
             _id: "ma-7",
             title: "SMA（Simple Moving Average）単純移動平均線とは？",
-            preview: true,
+            preview: false,
             url: "https://www.youtube.com/embed/CwmVN6pdko0",
             memo: "",
           },
           {
             _id: "ma-8",
             title: "「ノイズを減らせる」とは？",
-            preview: true,
+            preview: false,
             url: "https://www.youtube.com/embed/CwmVN6pdko0",
             memo: "",
           },
           {
             _id: "ma-9",
             title: "「トレンドを把握できる」とは？",
-            preview: true,
+            preview: false,
             url: "https://www.youtube.com/embed/CwmVN6pdko0",
             memo: "",
           },
           {
             _id: "ma-10",
             title: "「トレンド転換がわかる」とは？",
-            preview: true,
+            preview: false,
             url: "https://www.youtube.com/embed/CwmVN6pdko0",
             memo: "",
           },
           {
             _id: "ma-11",
             title: "「サポート/レジスタンスとしての機能がある」とは？",
-            preview: true,
+            preview: false,
             url: "https://www.youtube.com/embed/CwmVN6pdko0",
             memo: "",
           },
           {
             _id: "ma-12",
             title: "「長期トレンド/短期トレンドがわかる」とは？",
-            preview: true,
+            preview: false,
             url: "https://www.youtube.com/embed/CwmVN6pdko0",
             memo: "",
           },
           {
             _id: "ma-13",
             title: "「20期間」または「21期間」移動平均線とは？",
-            preview: true,
+            preview: false,
             url: "https://www.youtube.com/embed/CwmVN6pdko0",
             memo: "",
           },
           {
             _id: "ma-14",
             title: "複数の移動平均線を組み合わせるメリットについて",
-            preview: true,
+            preview: false,
             url: "https://www.youtube.com/embed/CwmVN6pdko0",
             memo: "",
           },
@@ -269,11 +269,11 @@ export const coursePosts: CoursePost[] = [
         ],
       },
       {
-        title: "プロも実践する ハマ塾式「黄金トレード」手法紹介",
+        title: "プロも実践する ハマ塾式「波トレード」手法紹介",
         lectures: [
           {
             _id: "ma-29",
-            title: "マル秘トレード手法（ハマ塾式 黄金トレード）とは？",
+            title: "マル秘トレード手法（ハマ塾式 波トレード）とは？",
             preview: false,
             url: "https://www.youtube.com/embed/CwmVN6pdko0",
             memo: "",
@@ -294,21 +294,21 @@ export const coursePosts: CoursePost[] = [
           },
           {
             _id: "ma-32",
-            title: "ハマ塾式「黄金インジ」とは？",
+            title: "ハマ塾式「波インジ」とは？",
             preview: false,
             url: "https://www.youtube.com/embed/CwmVN6pdko0",
             memo: "",
           },
           {
             _id: "ma-33",
-            title: "【受講特典】ハマ塾式「黄金インジ」セットアップ手順",
+            title: "【受講特典】ハマ塾式「波インジ」セットアップ手順",
             preview: false,
             url: "https://www.youtube.com/embed/CwmVN6pdko0",
             memo: "",
           },
           {
             _id: "ma-34",
-            title: "ハマ塾式「黄金インジ」の使い方",
+            title: "ハマ塾式「波インジ」の使い方",
             preview: false,
             url: "https://www.youtube.com/embed/CwmVN6pdko0",
             memo: "",
@@ -322,7 +322,7 @@ export const coursePosts: CoursePost[] = [
           },
           {
             _id: "ma-36",
-            title: "ハマ塾式「黄金インジ」を上手に使いこなすコツ",
+            title: "ハマ塾式「波インジ」を上手に使いこなすコツ",
             preview: false,
             url: "https://www.youtube.com/embed/CwmVN6pdko0",
             memo: "",
@@ -341,22 +341,21 @@ export const coursePosts: CoursePost[] = [
         lectures: [
           {
             _id: "ma-38",
-            title:
-              "ハマ塾式「黄金インジ」とRSIを使ったリプレイトレードの始め方",
+            title: "ハマ塾式「波インジ」とRSIを使ったリプレイトレードの始め方",
             preview: false,
             url: "https://www.youtube.com/embed/CwmVN6pdko0",
             memo: "",
           },
           {
             _id: "ma-39",
-            title: "プロも実践するハマ塾式「黄金トレード」実演",
+            title: "プロも実践するハマ塾式「波トレード」実演",
             preview: false,
             url: "https://www.youtube.com/embed/CwmVN6pdko0",
             memo: "",
           },
           {
             _id: "ma-40",
-            title: "（課題）ハマ塾式「黄金トレード」を習得しよう",
+            title: "（課題）ハマ塾式「波トレード」を習得しよう",
             preview: false,
             url: "https://www.youtube.com/embed/CwmVN6pdko0",
             memo: "",
@@ -383,12 +382,12 @@ export const coursePosts: CoursePost[] = [
     publishedDate: "April 20, 2026",
     title: "出来高を学び、極める。VPA (Volume Price Analysis)完全攻略",
     excerpt:
-      "出来高・価格帯別出来高・出来高加重平均を学び、エントリー/利確精度を高める方法を学びます",
+      "出来高・価格帯別出来高・出来高加重平均を学び、エントリー/利確精度を高めましょう",
     benefit: [
       "出来高とは何かを理解し、正しく読み取れるようになる",
       "出来高分析（VPA）を実践トレードに活かす方法を学べる",
       "価格帯別出来高を学び、実践トレードに活かす方法を学べる",
-      "出来高加重平均価格(VWAP)について学べる",
+      "出来高加重平均価格（VWAP）が学べる",
       "ハマ塾限定「出来高加重ローソク足」インジも手に入る",
     ],
     image: "/img/project4.png",
@@ -402,21 +401,21 @@ export const coursePosts: CoursePost[] = [
         title: "イントロダクション",
         lectures: [
           {
-            _id: "T3LqheDIXis",
+            _id: "va-1",
             title: "なぜ「出来高」を学ぶのか？",
             preview: true,
             url: "https://www.youtube.com/embed/T3LqheDIXis",
             memo: "",
           },
           {
-            _id: "T3LqheDIXis",
+            _id: "va-2",
             title: "限定特典「出来高加重ローソク足」インジとは？",
             preview: true,
             url: "https://www.youtube.com/embed/T3LqheDIXis",
             memo: "",
           },
           {
-            _id: "ma-2",
+            _id: "va-3",
             title: "ハマ塾「基本操作ガイド」",
             preview: true,
             url: "https://www.youtube.com/embed/",
@@ -599,6 +598,13 @@ export const coursePosts: CoursePost[] = [
         lectures: [
           {
             _id: "ma-41",
+            title: "限定特典「出来高加重平均ローソク足」セットアップ手順",
+            preview: false,
+            url: "https://www.youtube.com/embed/CwmVN6pdko0",
+            memo: "",
+          },
+          {
+            _id: "ma-42",
             title: "学んだことの振り返り",
             preview: false,
             url: "https://www.youtube.com/embed/CwmVN6pdko0",
@@ -616,9 +622,9 @@ export const coursePosts: CoursePost[] = [
     excerpt:
       "ハマ塾「梅と緑茶インジ」を入手し、PAの基礎から実践まで一気に習得します",
     benefit: [
-      "プロが使う独自の「ハマ塾 梅と緑茶インジゲーター」が手に入る",
       "プライスアクションについての理解が深まる",
       "SMC（スマートマネーコンセプト）を理解できる",
+      "限定特典「梅と緑茶インジ」が手に入る",
       "「梅と緑茶インジ」とSMCをフル活用した実践トレードが学べる",
     ],
     image: "/img/project7.jpg",
@@ -681,14 +687,14 @@ export const coursePosts: CoursePost[] = [
           {
             _id: "pa-7",
             title: "「ひげ」の解像度を高めよう",
-            preview: true,
+            preview: false,
             url: "https://www.youtube.com/embed/CwmVN6pdko0",
             memo: "",
           },
           {
             _id: "pa-8",
             title: "同時線(Doji、十時線、コマ)とは？",
-            preview: true,
+            preview: false,
             url: "https://www.youtube.com/embed/CwmVN6pdko0",
             memo: "",
           },
@@ -763,7 +769,7 @@ export const coursePosts: CoursePost[] = [
           {
             _id: "pa-18",
             title: "トレンドにはサイクルがある（サイクル理論）",
-            preview: true,
+            preview: false,
             url: "https://www.youtube.com/embed/CwmVN6pdko0",
             memo: "",
           },
@@ -880,11 +886,11 @@ export const coursePosts: CoursePost[] = [
         ],
       },
       {
-        title: "スマートマネーコンセプト(SMC)を理解しよう",
+        title: "スマートマネーコンセプト（SMC）を理解しよう",
         lectures: [
           {
             _id: "pa-33",
-            title: "スマートマネーコンセプト(SMC)とは？",
+            title: "スマートマネーコンセプト（SMC）とは？",
             preview: false,
             url: "https://www.youtube.com/embed/CwmVN6pdko0",
             memo: "",
@@ -968,7 +974,7 @@ export const coursePosts: CoursePost[] = [
           {
             _id: "pa-44",
             title:
-              "（演習）ハマ塾式「黄金インジ」「梅と緑茶インジ」を用いてリプレイトレードしよう",
+              "（演習）ハマ塾式「波インジ」「梅と緑茶インジ」を用いてリプレイトレードしよう",
             preview: false,
             url: "https://www.youtube.com/embed/CwmVN6pdko0",
             memo: "",
