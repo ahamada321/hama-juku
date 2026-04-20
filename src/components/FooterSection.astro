@@ -6,7 +6,6 @@ export interface FooterProps {
   logoSrc: string;
   brandName: string;
   description: string;
-  description2: string;
   socialLinks: { platform: string; url: string }[];
   navigationLinks: { label: string; href: string }[];
   copyright: string;
@@ -17,8 +16,7 @@ export interface FooterProps {
 const footerData: FooterProps = {
   logoSrc: '/img/logo-light.png',
   brandName: 'ハマ塾',
-  description: '「逆行エントリー」から卒業しよう。',
-  description2: '根拠と統計で「勝つべくして勝てる状態」を目指そう。',
+  description: '根拠と統計で「勝つべくして勝てる状態」をハマ塾で目指そう',
   socialLinks: [],
   navigationLinks: [
     /*{ label: 'ブログ記事', href: '/blog' },*/
@@ -40,7 +38,7 @@ const footerData: FooterProps = {
           <img src={footerData.logoSrc} alt="Logo" class="w-10" />
           <span class="text-2xl font-medium text-white">{footerData.brandName}</span>
         </div>
-        <p class="text-gray-400">{footerData.description}<br />{footerData.description2}</p>
+        <p class="text-gray-400">{footerData.description}</p>
         <!-- SocialLinks -->
         <SocialLinks socialLinks={footerData.socialLinks} />
       </div>
