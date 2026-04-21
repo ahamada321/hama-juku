@@ -6,7 +6,7 @@ interface Lecture {
   title: string;
   preview: boolean;
   url: string;
-  memo: string;
+  content: string;
 }
 
 interface Props {
@@ -26,6 +26,7 @@ const { lecture, prevPage, nextPage, nextPrev, slug, paid } = Astro.props;
     <div
       class="order-1 relative w-full rounded-xl border-[2px] aspect-video overflow-hidden flex flex-col items-center justify-center"
     >
+      <!-- Video Content -->
       <iframe
         src={lecture.url}
         class="absolute top-0 inset-x-0 w-full h-full"
@@ -33,6 +34,13 @@ const { lecture, prevPage, nextPage, nextPrev, slug, paid } = Astro.props;
         allowfullscreen
       ></iframe>
     </div>
+    <!-- Additional Content -->
+    { paid && (
+    <div class="bg-white rounded-xl border border-black/10 shadow-lg mb-12">
+      <div class="px-8 py-6 post-content" set:html={lecture.content} />
+    </div>
+    )}
+
     <VideoPagination prevPage={prevPage} nextPage={nextPage} nextPrev={nextPrev} slug={slug} paid={paid} />
   </div>
 </section>
