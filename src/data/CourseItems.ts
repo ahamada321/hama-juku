@@ -382,7 +382,7 @@ export const coursePosts: CoursePost[] = [
     publishedDate: "April 20, 2026",
     title: "出来高を学び、極める。VPA (Volume Price Analysis)完全攻略",
     excerpt:
-      "出来高・価格帯別出来高・出来高加重平均を学び、エントリー/利確精度を高めましょう",
+      "出来高/価格帯別出来高/出来高加重平均を学び、売買判断の精度を高めましょう",
     benefit: [
       "出来高とは何かを理解し、正しく読み取れるようになる",
       "出来高分析（VPA）を実践トレードに活かす方法を学べる",
