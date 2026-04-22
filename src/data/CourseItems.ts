@@ -32,15 +32,15 @@ export const coursePosts: CoursePost[] = [
     slug: "ma",
     publishedDate: "June 20, 2025",
     title: "【本質を理解する】移動平均線（SMA／EMA）完全攻略",
-    excerpt:
-      "ハマ塾「波インジ」を入手し、移動平均線を基礎→実践で使える技術まで学びます",
+    excerpt: "移動平均線を基礎から学び、実践で使いこなせる状態を目指します",
     benefit: [
-      "プロが使う独自の「ハマ塾 波インジゲーター」が手に入る",
+      "SMAやEMAなどの移動平均線の種類や特徴がわかる",
+      "効きやすい移動平均線の期間や組み合わせ方がわかる",
       "移動平均線についての理解が深まり、実践で使えるようになる",
-      "複数のMAを使ったエントリー / 利確手法が学べる",
+      "ハマ塾限定「波インジ」も手に入る",
     ],
     image: "/img/project6.jpg",
-    salePrice: 29800,
+    salePrice: 36800,
     price: 49800,
     alt: "【本質を理解する】移動平均線（SMA／EMA）完全攻略",
     url: "https://www.paypal.com/ncp/payment/FEB8GSZYNBPTY",
@@ -60,8 +60,13 @@ export const coursePosts: CoursePost[] = [
             _id: "ma-2",
             title: "ハマ塾 基本操作",
             preview: true,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
-            content: "",
+            url: "https://www.youtube.com/embed/fzihvhXPHSs",
+            content: `                          
+              <h3>ハマアツに直接質問できます</h3>
+              <a href="https://line.me/ti/g2/-GycHByel-LK4C1n5tvY9sdlAa9s7rqIikd1MQ?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" target="_blank" rel="noopener noreferrer" class="font-semibold underline">
+                ハマアツQ&Aラウンジ（オープンチャット）はこちら
+              </a>
+            `,
           },
         ],
       },
@@ -391,7 +396,7 @@ export const coursePosts: CoursePost[] = [
       "ハマ塾限定「出来高加重ローソク足」インジも手に入る",
     ],
     image: "/img/project4.png",
-    salePrice: 29800,
+    salePrice: 36800,
     price: 49800,
     alt: "出来高を学び、極める。VPA (Volume Price Analysis)完全攻略",
     url: "https://www.paypal.com/ncp/payment/3ZLUXE7XXRNEG",
@@ -412,7 +417,12 @@ export const coursePosts: CoursePost[] = [
             title: "ハマ塾「基本操作ガイド」",
             preview: true,
             url: "https://www.youtube.com/embed/fzihvhXPHSs",
-            content: "",
+            content: `                          
+              <h3>ハマアツに直接質問できます</h3>
+              <a href="https://line.me/ti/g2/-GycHByel-LK4C1n5tvY9sdlAa9s7rqIikd1MQ?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" target="_blank" rel="noopener noreferrer" class="font-semibold underline">
+                ハマアツQ&Aラウンジ（オープンチャット）はこちら
+              </a>
+            `,
           },
         ],
       },
@@ -637,7 +647,7 @@ export const coursePosts: CoursePost[] = [
       "「梅と緑茶インジ」とSMCをフル活用した実践トレードが学べる",
     ],
     image: "/img/project7.jpg",
-    salePrice: 29800,
+    salePrice: 36800,
     price: 49800,
     alt: "プライスアクション【完全攻略】",
     url: "https://www.paypal.com/ncp/payment/WCXKQXNDYPNAA",
@@ -657,8 +667,13 @@ export const coursePosts: CoursePost[] = [
             _id: "pa-2",
             title: "ハマ塾 基本操作",
             preview: true,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
-            content: "",
+            url: "https://www.youtube.com/embed/fzihvhXPHSs",
+            content: `                          
+              <h3>ハマアツに直接質問できます</h3>
+              <a href="https://line.me/ti/g2/-GycHByel-LK4C1n5tvY9sdlAa9s7rqIikd1MQ?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" target="_blank" rel="noopener noreferrer" class="font-semibold underline">
+                ハマアツQ&Aラウンジ（オープンチャット）はこちら
+              </a>
+            `,
           },
         ],
       },
