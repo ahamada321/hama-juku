@@ -23,10 +23,11 @@ const { lecture, prevPage, nextPage, nextPrev, slug, paid } = Astro.props;
 
 <section id="video" class="relative bg-white/70 backdrop-blur-md py-6 pb-8 overflow-hidden">
   <div class="max-w-4xl lg:px-10 mx-auto space-y-8">
+    <!-- Video Content -->
+    { lecture.url && (
     <div
       class="order-1 relative w-full rounded-xl border-[2px] aspect-video overflow-hidden flex flex-col items-center justify-center"
     >
-      <!-- Video Content -->
       <iframe
         src={lecture.url}
         class="absolute top-0 inset-x-0 w-full h-full"
@@ -34,8 +35,9 @@ const { lecture, prevPage, nextPage, nextPrev, slug, paid } = Astro.props;
         allowfullscreen
       ></iframe>
     </div>
+    )}
     <!-- Additional Content -->
-    { paid && (
+    { paid && lecture.content && (
     <div class="bg-white rounded-xl border border-black/10 shadow-lg mb-12">
       <div class="px-8 py-6 post-content" set:html={lecture.content} />
     </div>

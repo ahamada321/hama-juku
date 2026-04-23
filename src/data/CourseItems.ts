@@ -61,12 +61,7 @@ export const coursePosts: CoursePost[] = [
             title: "ハマ塾 基本操作",
             preview: true,
             url: "https://www.youtube.com/embed/fzihvhXPHSs",
-            content: `                          
-              <h3>ハマアツに直接質問できます</h3>
-              <a href="https://line.me/ti/g2/-GycHByel-LK4C1n5tvY9sdlAa9s7rqIikd1MQ?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" target="_blank" rel="noopener noreferrer" class="font-semibold underline">
-                ハマアツQ&Aラウンジ（オープンチャット）はこちら
-              </a>
-            `,
+            content: "",
           },
         ],
       },
@@ -95,106 +90,124 @@ export const coursePosts: CoursePost[] = [
             content: "",
           },
           {
-            _id: "ma-6",
+            _id: "zg0UcdWkQek",
             title:
               "（課題）いろんな期間の移動平均線が表示できることを確認しよう",
-            preview: false,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
+            preview: true,
+            url: "https://www.youtube.com/embed/zg0UcdWkQek",
             content: "",
           },
           {
-            _id: "ma-7",
+            _id: "5K2WfJQzOmA",
+            title: "【限定特典】「波インジ」とは？",
+            preview: true,
+            url: "https://www.youtube.com/embed/5K2WfJQzOmA",
+            content: "",
+          },
+          {
+            _id: "48PVCo5NWVQ",
             title: "SMA（Simple Moving Average）単純移動平均線とは？",
             preview: false,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
+            url: "https://www.youtube.com/embed/48PVCo5NWVQ",
             content: "",
           },
           {
-            _id: "ma-8",
+            _id: "oImAQEUFV-o",
             title: "「ノイズを減らせる」とは？",
             preview: false,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
+            url: "https://www.youtube.com/embed/oImAQEUFV-o",
             content: "",
           },
           {
-            _id: "ma-9",
+            _id: "rsQU57uw2Gs",
             title: "「トレンドを把握できる」とは？",
             preview: false,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
+            url: "https://www.youtube.com/embed/rsQU57uw2Gs",
             content: "",
           },
           {
-            _id: "ma-10",
+            _id: "ogQtHUnXLX4",
             title: "「トレンド転換がわかる」とは？",
             preview: false,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
+            url: "https://www.youtube.com/embed/ogQtHUnXLX4",
             content: "",
           },
           {
-            _id: "ma-11",
+            _id: "izcu2Twd7t4",
             title: "「サポート/レジスタンスとしての機能がある」とは？",
             preview: false,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
+            url: "https://www.youtube.com/embed/izcu2Twd7t4",
             content: "",
           },
           {
-            _id: "ma-12",
+            _id: "8MAYQcjRZgY",
             title: "「長期トレンド/短期トレンドがわかる」とは？",
             preview: false,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
+            url: "https://www.youtube.com/embed/8MAYQcjRZgY",
             content: "",
           },
           {
-            _id: "ma-13",
+            _id: "2jxDRPDSNEY",
             title: "「20期間」または「21期間」移動平均線とは？",
             preview: false,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
+            url: "https://www.youtube.com/embed/2jxDRPDSNEY",
             content: "",
           },
           {
-            _id: "ma-14",
+            _id: "OIEWc_jelhw",
             title: "複数の移動平均線を組み合わせるメリットについて",
             preview: false,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
+            url: "https://www.youtube.com/embed/OIEWc_jelhw",
+            content: "",
+          },
+          {
+            _id: "V76n0CtDpk8",
+            title:
+              "21SMAの傾きからエントリーする方法は有効なのかを検証してみよう",
+            preview: false,
+            url: "https://www.youtube.com/embed/V76n0CtDpk8",
             content: "",
           },
           {
             _id: "ma-15",
-            title:
-              "21SMAの傾きからエントリーする方法は有効なのかを検証してみよう",
-            preview: false,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
-            content: "",
-          },
-          {
-            _id: "ma-16",
             title: "（課題）リプレイ機能で検証してみよう",
             preview: false,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
-            content: "",
+            url: "",
+            content: `
+              <h3>演習課題</h3>
+              <p>１つ前の授業から、21SMAの傾きからのエントリーや利確の判断を行うのはあまりお勧めできないということを確認できました。</p>
+              <p>せっかくなので、手元のTradingView（トレーディングビュー）を使い、好きな銘柄で同じ手順で複数回リプレイトレードを行うことで、感触を確かめてみましょう。</p>
+
+              <p>余力があれば、21期間ではない期間の場合もいろいろ試すことで、信頼性の高い期間があるのかどうかも追加で調査してみましょう。</p>
+
+              <p>ある程度確認できたら、次の授業へ進んでいきましょう。</p>`,
           },
           {
-            _id: "ma-17",
+            _id: "ocEi8f_k42s",
             title: "（応用）ボリンジャーバンドとバンドウォークについて",
             preview: false,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
+            url: "https://www.youtube.com/embed/ocEi8f_k42s",
             content: "",
           },
           {
-            _id: "ma-18",
+            _id: "za4c-WTKWBM",
             title:
               "トレンド発生中の移動平均線はレジスタンス・サポートとして機能する",
             preview: false,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
+            url: "https://www.youtube.com/embed/za4c-WTKWBM",
             content: "",
           },
           {
-            _id: "ma-19",
-            title:
-              "（クイズ）単純移動平均線（SMA）の役割として「誤っている」ものはどれか？",
+            _id: "h2Ytt_krfvE",
+            title: "（クイズ）演習問題",
             preview: false,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
-            content: "",
+            url: "https://www.youtube.com/embed/h2Ytt_krfvE",
+            content: `
+              <h3>（クイズ）単純移動平均線（SMA）の役割として「誤っている」ものはどれか？</h3>
+              <p>1. トレンドが出ている時は、サポートラインやレジスタンスラインのような役割を果たす。</p>
+              <p>2. 移動平均線を注力して見ることで、ローソク足の価格の値動きよりもノイズを減らした値動きを見ることができる。</p>
+              <p>3. 移動平均線の傾きが継続しているかどうかで、トレンドが出ているかどうかを判断できる。</p>
+              <p>4. 20期間、または21期間のSMAだけで、売買活動を行い資産を増やすことができる。</p>`,
           },
         ],
       },
@@ -202,47 +215,49 @@ export const coursePosts: CoursePost[] = [
         title: "初心者が知らない200期間移動平均線とは？",
         lectures: [
           {
-            _id: "ma-20",
+            _id: "9Qcpr1W7NPI",
             title: "初心者が知らない200期間移動平均線とは？",
             preview: false,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
+            url: "https://www.youtube.com/embed/9Qcpr1W7NPI",
             content: "",
           },
           {
-            _id: "ma-21",
+            _id: "44vS_5ZqlgA",
             title: "50MAや100MAはなぜ機能するのか？",
             preview: false,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
+            url: "https://www.youtube.com/embed/44vS_5ZqlgA",
             content: "",
           },
           {
-            _id: "ma-22",
+            _id: "nDLq1J4jQ3Y",
             title: "75期間移動平均線が効きやすい銘柄と効きにくい銘柄",
             preview: false,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
+            url: "https://www.youtube.com/embed/nDLq1J4jQ3Y",
             content: "",
           },
           {
-            _id: "ma-23",
+            _id: "LZgsdxoTGnQ",
             title: "トレンドを把握するための200MAの使い方",
             preview: false,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
+            url: "https://www.youtube.com/embed/LZgsdxoTGnQ",
             content: "",
           },
           {
-            _id: "ma-24",
+            _id: "7-hJXrYcR9Q",
             title: "フラクタル構造とマルチタイムフレーム分析について",
             preview: false,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
+            url: "https://www.youtube.com/embed/7-hJXrYcR9Q",
             content: "",
           },
           {
-            _id: "ma-25",
-            title:
-              "（クイズ）長期トレンドの把握方法として「正しい説明」はどれか？",
+            _id: "ma-35",
+            title: "（クイズ）演習問題",
             preview: false,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
-            content: "",
+            url: "",
+            content: `
+              <h3>（クイズ）長期トレンドの把握方法として「正しい説明」はどれか？</h3>
+              <p>1. 長期トレンドを把握するために、日足20SMAの傾きから判断した。</p>
+              <p>2. 長期トレンドを把握するために、日足200SMAの傾きから判断した。</p>`,
           },
         ],
       },
@@ -417,12 +432,7 @@ export const coursePosts: CoursePost[] = [
             title: "ハマ塾「基本操作ガイド」",
             preview: true,
             url: "https://www.youtube.com/embed/fzihvhXPHSs",
-            content: `                          
-              <h3>ハマアツに直接質問できます</h3>
-              <a href="https://line.me/ti/g2/-GycHByel-LK4C1n5tvY9sdlAa9s7rqIikd1MQ?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" target="_blank" rel="noopener noreferrer" class="font-semibold underline">
-                ハマアツQ&Aラウンジ（オープンチャット）はこちら
-              </a>
-            `,
+            content: "",
           },
         ],
       },
@@ -445,7 +455,7 @@ export const coursePosts: CoursePost[] = [
           },
           {
             _id: "va-3",
-            title: "限定特典「出来高加重ローソク足」インジとは？",
+            title: "【限定特典】「出来高加重ローソク足」インジとは？",
             preview: true,
             url: "https://www.youtube.com/embed/Wjy2Yqny9FI",
             content: `                          
@@ -612,7 +622,7 @@ export const coursePosts: CoursePost[] = [
         lectures: [
           {
             _id: "Ir5fIYkWSaE",
-            title: "限定特典「出来高加重平均ローソク足」セットアップ手順",
+            title: "【限定特典】「出来高加重平均ローソク足」セットアップ手順",
             preview: false,
             url: "https://www.youtube.com/embed/Ir5fIYkWSaE",
             content: `                          
@@ -624,7 +634,7 @@ export const coursePosts: CoursePost[] = [
           },
           {
             _id: "-IOuhKhcLM0",
-            title: "限定特典「出来高加重平均ローソク足」設定方法",
+            title: "【限定特典】「出来高加重平均ローソク足」設定方法",
             preview: false,
             url: "https://www.youtube.com/embed/-IOuhKhcLM0",
             content: "",
@@ -668,12 +678,7 @@ export const coursePosts: CoursePost[] = [
             title: "ハマ塾 基本操作",
             preview: true,
             url: "https://www.youtube.com/embed/fzihvhXPHSs",
-            content: `                          
-              <h3>ハマアツに直接質問できます</h3>
-              <a href="https://line.me/ti/g2/-GycHByel-LK4C1n5tvY9sdlAa9s7rqIikd1MQ?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" target="_blank" rel="noopener noreferrer" class="font-semibold underline">
-                ハマアツQ&Aラウンジ（オープンチャット）はこちら
-              </a>
-            `,
+            content: "",
           },
         ],
       },
