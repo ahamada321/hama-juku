@@ -44,7 +44,7 @@ export const coursePosts: CoursePost[] = [
     price: 49800,
     alt: "【本質を理解する】移動平均線（SMA／EMA）完全攻略",
     url: "https://www.paypal.com/ncp/payment/FEB8GSZYNBPTY",
-    youtube: "https://www.youtube.com/embed/CwmVN6pdko0",
+    youtube: "https://www.youtube.com/embed/7SDcE7pGPtU",
     sections: [
       {
         title: "イントロダクション",
@@ -53,7 +53,7 @@ export const coursePosts: CoursePost[] = [
             _id: "ma-1",
             title: "なぜ移動平均線を学ぶのか？",
             preview: true,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
+            url: "https://www.youtube.com/embed/7SDcE7pGPtU",
             content: "",
           },
           {
@@ -74,24 +74,24 @@ export const coursePosts: CoursePost[] = [
         title: "「SMA」（Simple Moving Average）単純移動平均線とは？",
         lectures: [
           {
-            _id: "ma-3",
+            _id: "v29RyuWeg1k",
             title: "使いこなしている人が実は少ない移動平均線とは？",
             preview: true,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
+            url: "https://www.youtube.com/embed/v29RyuWeg1k",
             content: "",
           },
           {
-            _id: "ma-4",
+            _id: "czNER-Ygnfk",
             title: "移動平均線の主な役割５選",
             preview: true,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
+            url: "https://www.youtube.com/embed/czNER-Ygnfk",
             content: "",
           },
           {
-            _id: "ma-5",
+            _id: "OpwFkbN6t9c",
             title: "移動平均線の「期間」とは？",
             preview: true,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
+            url: "https://www.youtube.com/embed/OpwFkbN6t9c",
             content: "",
           },
           {
