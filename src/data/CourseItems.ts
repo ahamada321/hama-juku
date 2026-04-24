@@ -40,7 +40,7 @@ export const coursePosts: CoursePost[] = [
       "ハマ塾限定「波インジ」も手に入る",
     ],
     image: "/img/project6.jpg",
-    salePrice: 36800,
+    salePrice: 37800,
     price: 49800,
     alt: "【本質を理解する】移動平均線（SMA／EMA）完全攻略",
     url: "https://www.paypal.com/ncp/payment/FEB8GSZYNBPTY",
@@ -58,7 +58,7 @@ export const coursePosts: CoursePost[] = [
           },
           {
             _id: "ma-2",
-            title: "ハマ塾 基本操作",
+            title: "ハマ塾「基本操作ガイド」",
             preview: true,
             url: "https://www.youtube.com/embed/fzihvhXPHSs",
             content: "",
@@ -177,9 +177,7 @@ export const coursePosts: CoursePost[] = [
               <h3>演習課題</h3>
               <p>１つ前の授業から、21SMAの傾きからのエントリーや利確の判断を行うのはあまりお勧めできないということを確認できました。</p>
               <p>せっかくなので、手元のTradingView（トレーディングビュー）を使い、好きな銘柄で同じ手順で複数回リプレイトレードを行うことで、感触を確かめてみましょう。</p>
-
               <p>余力があれば、21期間ではない期間の場合もいろいろ試すことで、信頼性の高い期間があるのかどうかも追加で調査してみましょう。</p>
-
               <p>ある程度確認できたら、次の授業へ進んでいきましょう。</p>`,
           },
           {
@@ -247,7 +245,15 @@ export const coursePosts: CoursePost[] = [
             title: "フラクタル構造とマルチタイムフレーム分析について",
             preview: false,
             url: "https://www.youtube.com/embed/7-hJXrYcR9Q",
-            content: "",
+            content: `
+              <h3>姉妹コース案内</h3>
+              <p>フラクタル構造やテクニカル分析の基礎については、</p>
+              <p>
+                <a href="/course/ta" class="font-semibold underline">
+                  最初の一歩を踏み出す！テクニカル分析入門
+                </a>
+              </p>
+              <p>で詳しく解説していますので、ぜひあわせて受講してみてください。</p>`,
           },
           {
             _id: "ma-35",
@@ -266,30 +272,36 @@ export const coursePosts: CoursePost[] = [
           "押し目買いに役立つEMA（Exponential Moving Average）指数移動平均線とは？",
         lectures: [
           {
-            _id: "ma-26",
+            _id: "hyU9wWHOS4o",
             title: "イントロ",
             preview: false,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
+            url: "https://www.youtube.com/embed/hyU9wWHOS4o",
             content: "",
           },
           {
-            _id: "ma-27",
+            _id: "sPWcIDs42oA",
             title: "EMA（Exponential Moving Average）指数移動平均線とは？",
             preview: false,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
+            url: "https://www.youtube.com/embed/sPWcIDs42oA",
             content: "",
           },
           {
-            _id: "ma-28",
+            _id: "tEWqPL-bVz8",
             title: "複数時間足でそれぞれEMAを追加する方法",
             preview: false,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
-            content: "",
+            url: "https://www.youtube.com/embed/tEWqPL-bVz8",
+            content: `
+              <h3>参考情報</h3>
+              <p>
+                <a href="https://jp.tradingview.com/pricing/?aff_id=139657" target="_blank" rel="noopener noreferrer" class="font-semibold underline">
+                  TradingView有料プランの詳細はこちら
+                </a>
+              </p>`,
           },
         ],
       },
       {
-        title: "プロも実践する ハマ塾式「波トレード」手法紹介",
+        title: "ハマ塾式「波トレード」手法紹介",
         lectures: [
           {
             _id: "ma-29",
@@ -411,7 +423,7 @@ export const coursePosts: CoursePost[] = [
       "ハマ塾限定「出来高加重ローソク足」インジも手に入る",
     ],
     image: "/img/project4.png",
-    salePrice: 36800,
+    salePrice: 37800,
     price: 49800,
     alt: "出来高を学び、極める。VPA (Volume Price Analysis)完全攻略",
     url: "https://www.paypal.com/ncp/payment/3ZLUXE7XXRNEG",
@@ -657,7 +669,7 @@ export const coursePosts: CoursePost[] = [
       "「梅と緑茶インジ」とSMCをフル活用した実践トレードが学べる",
     ],
     image: "/img/project7.jpg",
-    salePrice: 36800,
+    salePrice: 37800,
     price: 49800,
     alt: "プライスアクション【完全攻略】",
     url: "https://www.paypal.com/ncp/payment/WCXKQXNDYPNAA",
