@@ -256,10 +256,10 @@ export const coursePosts: CoursePost[] = [
               <p>で詳しく解説していますので、ぜひあわせて受講してみてください。</p>`,
           },
           {
-            _id: "ma-35",
+            _id: "DnpA1i12Ujs",
             title: "（クイズ）演習問題",
             preview: false,
-            url: "",
+            url: "https://www.youtube.com/embed/DnpA1i12Ujs",
             content: `
               <h3>（クイズ）長期トレンドの把握方法として「正しい説明」はどれか？</h3>
               <p>1. 長期トレンドを把握するために、日足20SMAの傾きから判断した。</p>
@@ -305,55 +305,27 @@ export const coursePosts: CoursePost[] = [
         lectures: [
           {
             _id: "ma-29",
-            title: "マル秘トレード手法（ハマ塾式 波トレード）とは？",
+            title: "【限定特典】「波インジ」セットアップ手順",
             preview: false,
             url: "https://www.youtube.com/embed/CwmVN6pdko0",
             content: "",
           },
           {
             _id: "ma-30",
-            title: "今の実力を可視化しよう",
+            title: "【限定特典】「波インジ」設定方法",
             preview: false,
             url: "https://www.youtube.com/embed/CwmVN6pdko0",
             content: "",
           },
           {
             _id: "ma-31",
-            title: "（課題）今の実力を可視化しよう",
-            preview: false,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
-            content: "",
-          },
-          {
-            _id: "ma-32",
-            title: "ハマ塾式「波インジ」とは？",
-            preview: false,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
-            content: "",
-          },
-          {
-            _id: "ma-33",
-            title: "【受講特典】ハマ塾式「波インジ」セットアップ手順",
+            title: "（課題）今現在の実力を「把握」しよう",
             preview: false,
             url: "https://www.youtube.com/embed/CwmVN6pdko0",
             content: "",
           },
           {
             _id: "ma-34",
-            title: "ハマ塾式「波インジ」の使い方",
-            preview: false,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
-            content: "",
-          },
-          {
-            _id: "ma-35",
-            title: "ハマ塾生限定ノウハウ",
-            preview: false,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
-            content: "",
-          },
-          {
-            _id: "ma-36",
             title: "ハマ塾式「波インジ」を上手に使いこなすコツ",
             preview: false,
             url: "https://www.youtube.com/embed/CwmVN6pdko0",
@@ -361,7 +333,7 @@ export const coursePosts: CoursePost[] = [
           },
           {
             _id: "ma-37",
-            title: "（課題）今の実力を可視化しよう",
+            title: "（課題）今現在の実力を「再確認」しよう",
             preview: false,
             url: "https://www.youtube.com/embed/CwmVN6pdko0",
             content: "",
@@ -380,7 +352,7 @@ export const coursePosts: CoursePost[] = [
           },
           {
             _id: "ma-39",
-            title: "プロも実践するハマ塾式「波トレード」実演",
+            title: "【特別実演】ハマアツによる「波トレード」実演",
             preview: false,
             url: "https://www.youtube.com/embed/CwmVN6pdko0",
             content: "",
