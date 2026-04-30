@@ -31,8 +31,8 @@ export const coursePosts: CoursePost[] = [
   {
     slug: "ma",
     publishedDate: "June 20, 2025",
-    title: "【本質を理解する】移動平均線（SMA／EMA）完全攻略",
-    excerpt: "移動平均線を基礎から学び、実践で使いこなせる状態を目指します",
+    title: "【本質から理解する】移動平均線（SMA／EMA）完全攻略",
+    excerpt: "基礎から実践まで段階的に学び、再現性ある分析力を身につける",
     benefit: [
       "SMAやEMAなどの移動平均線の種類や特徴がわかる",
       "効きやすい移動平均線の期間や組み合わせ方がわかる",
@@ -42,7 +42,7 @@ export const coursePosts: CoursePost[] = [
     image: "/img/ma.png",
     salePrice: 39800,
     price: 49800,
-    alt: "【本質を理解する】移動平均線（SMA／EMA）完全攻略",
+    alt: "【本質から理解する】移動平均線（SMA／EMA）完全攻略",
     url: "https://www.paypal.com/ncp/payment/FEB8GSZYNBPTY",
     youtube: "https://www.youtube.com/embed/7SDcE7pGPtU",
     sections: [
