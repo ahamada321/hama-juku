@@ -345,10 +345,10 @@ export const coursePosts: CoursePost[] = [
         title: "実践で成果を出す",
         lectures: [
           {
-            _id: "OylvK7K6ppI",
+            _id: "UuAHAJYCVWw",
             title: "【特別実演】ハマアツによる「波トレード」実演",
             preview: false,
-            url: "https://www.youtube.com/embed/OylvK7K6ppI",
+            url: "https://www.youtube.com/embed/UuAHAJYCVWw",
             content: "",
           },
           {
