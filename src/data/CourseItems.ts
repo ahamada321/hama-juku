@@ -344,24 +344,17 @@ export const coursePosts: CoursePost[] = [
         title: "実践で成果を出す",
         lectures: [
           {
-            _id: "ma-38",
-            title: "ハマ塾式「波インジ」とRSIを使ったリプレイトレードの始め方",
-            preview: false,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
-            content: "",
-          },
-          {
-            _id: "ma-39",
+            _id: "OylvK7K6ppI",
             title: "【特別実演】ハマアツによる「波トレード」実演",
             preview: false,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
+            url: "https://www.youtube.com/embed/OylvK7K6ppI",
             content: "",
           },
           {
-            _id: "ma-40",
-            title: "（課題）ハマ塾式「波トレード」を習得しよう",
+            _id: "WffjAU2crmM",
+            title: "最後の演習課題",
             preview: false,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
+            url: "https://www.youtube.com/embed/WffjAU2crmM",
             content: "",
           },
         ],
@@ -370,10 +363,10 @@ export const coursePosts: CoursePost[] = [
         title: "次のステップへ向けて",
         lectures: [
           {
-            _id: "ma-41",
-            title: "学んだことの振り返り",
+            _id: "1AFxCw5LFTE",
+            title: "学んだことの振り返り＆次のステップへ向けて",
             preview: false,
-            url: "https://www.youtube.com/embed/CwmVN6pdko0",
+            url: "https://www.youtube.com/embed/1AFxCw5LFTE",
             content: "",
           },
         ],
