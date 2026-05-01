@@ -13,7 +13,7 @@ const { title, description, position = "fixed" } = Astro.props;
 
 <section
   id="heading-page"
-  class="relative bg-gray-200 border-b border-black/10 pt-12 pb-4 flex flex-col items-center justify-center overflow-hidden"
+  class="relative bg-gray-200 border-b border-black/10 pt-12 pb-3 flex flex-col items-center justify-center overflow-hidden"
 >
   {position === 'fixed' ? (
     <TableFixed />
@@ -22,7 +22,7 @@ const { title, description, position = "fixed" } = Astro.props;
   )}
 
   <div class="lg:max-w-7xl mx-auto px-6 relative text-center">
-    <div class="relative max-w-3xl mx-auto py-6">
+    <div class="relative max-w-3xl mx-auto py-7">
       <h1 class="text-3xl md:text-4xl font-semibold mb-1 text-black leading-tight md:leading-tight">
         {title}
       </h1>
