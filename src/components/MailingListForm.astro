@@ -1,14 +1,13 @@
 ---
 const { 
-  title = 'よくある質問と答え', 
-  description = '※登録解除はいつでも可能です',
+  description = '※不要になった場合は、いつでも解除できます',
 } = Astro.props;
 ---
 
 <section id="mailing-list-form" class="relative bg-white pb-8 overflow-hidden">
   <!-- Mailing List Form -->
   <div class="ml-embedded" data-form="JdgU6z"></div>
-  <p class="text-md text-gray-600 max-w-2xl mx-auto text-center">{description}</p>
+  <p class="text-sm text-gray-600 max-w-2xl mx-auto text-center">{description}</p>
 
   <!-- MailerLite Universal Script -->
   <script is:inline>
