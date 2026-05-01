@@ -8,11 +8,19 @@ const headerData: HeaderProps = {
   logoSrc: '/img/logo.png',
   brandName: 'ハマ塾',
 };
+
+const isDisableMenu = Astro.url.pathname.startsWith("/information");
 ---
 
 <header id="header-navbar" class="fixed top-0 inset-x-0 z-40">
   <nav class="lg:max-w-7xl mx-auto px-6 py-4">
     <div class="flex items-center gap-2 justify-between">
+      { isDisableMenu ? (
+      <div class="nav-link flex items-center gap-2 text-3xl font-medium">
+        <img src={headerData.logoSrc} alt="logo" class="w-10" />
+        {headerData.brandName}
+      </div>
+      ) : (
       <a href="/" class="nav-link flex items-center gap-2 text-3xl font-medium">
         <img src={headerData.logoSrc} alt="logo" class="w-10" />
         {headerData.brandName}
@@ -23,6 +31,7 @@ const headerData: HeaderProps = {
           <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
         </svg>
       </button>
+      )}
     </div>
   </nav>
 </header>
