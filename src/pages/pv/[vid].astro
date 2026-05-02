@@ -1,5 +1,5 @@
 ---
-import Layout from '@src/layouts/Layout.astro';
+import SecretLayout from '@src/layouts/SecretLayout.astro';
 import VideoSection from '@components/VideoSection.astro';
 import { coursePosts } from '@src/data/CourseItems';
 
@@ -45,7 +45,7 @@ const prevLecture = lectures[currentIndex - 1] ?? null;
 const nextLecture = lectures[currentIndex + 1] ?? null;
 ---
 
-<Layout title={lecture.title}>
+<SecretLayout title={lecture.title}>
   <div class="relative bg-gray-100 pb-2 pt-20 overflow-hidden">
     <div class="lg:max-w-7xl mx-auto">
       <div class="text-center">
@@ -61,4 +61,4 @@ const nextLecture = lectures[currentIndex + 1] ?? null;
     slug={post.slug}
     paid={false}
   />
-</Layout>
+</SecretLayout>

@@ -1,5 +1,5 @@
 ---
-import Layout from '@src/layouts/Layout.astro';
+import SecretLayout from '@src/layouts/SecretLayout.astro';
 import HeadingCourse from '@components/HeadingCourse.astro';
 import CourseCurriculum from '@components/CourseCurriculum.astro';
 import { coursePosts } from '@src/data/CourseItems';
@@ -22,7 +22,7 @@ const relatedPosts = coursePosts
   .slice(0, 3);
 ---
 
-<Layout title={post.title} >
+<SecretLayout title={post.title} >
   <HeadingCourse
     paid={true}
     title={post.title}
@@ -34,4 +34,4 @@ const relatedPosts = coursePosts
     paid={true}
     sections={post.sections}
    />
-</Layout>
+</SecretLayout>
