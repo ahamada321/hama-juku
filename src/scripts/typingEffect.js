@@ -6,7 +6,6 @@ const words = [
   "投資マインドを育む",
   "実践スキルを磨く",
   "規律を整える",
-  "喜びを分かち合う",
 ];
 let wordIndex = 0;
 let charIndex = 0;
