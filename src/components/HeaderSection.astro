@@ -15,12 +15,7 @@ const isDisableMenu = Astro.url.pathname.startsWith("/information");
 <header id="header-navbar" class="fixed top-0 inset-x-0 z-40">
   <nav class="lg:max-w-7xl mx-auto px-6 py-4">
     <div class="flex items-center gap-2 justify-between">
-      { isDisableMenu ? (
-      <div class="nav-link flex items-center gap-2 text-3xl font-medium">
-        <img src={headerData.logoSrc} alt="logo" class="w-10" />
-        {headerData.brandName}
-      </div>
-      ) : (
+      { !isDisableMenu && (
       <a href="/" class="nav-link flex items-center gap-2 text-3xl font-medium">
         <img src={headerData.logoSrc} alt="logo" class="w-10" />
         {headerData.brandName}
