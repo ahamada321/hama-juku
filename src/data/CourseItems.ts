@@ -45,7 +45,7 @@ export const coursePosts: CoursePost[] = [
     price: 69800,
     alt: "【本質から理解する】移動平均線（SMA／EMA）完全攻略",
     url: "https://www.paypal.com/ncp/payment/FEB8GSZYNBPTY",
-    youtube: "https://www.youtube.com/embed/7SDcE7pGPtU",
+    youtube: "https://www.youtube.com/embed/b3gKobHFVNw",
     sections: [
       {
         title: "イントロダクション",
@@ -54,7 +54,7 @@ export const coursePosts: CoursePost[] = [
             _id: "ma-1",
             title: "なぜ移動平均線を学ぶのか？",
             preview: true,
-            url: "https://www.youtube.com/embed/7SDcE7pGPtU",
+            url: "https://www.youtube.com/embed/b3gKobHFVNw",
             content: "",
           },
           {
@@ -393,7 +393,7 @@ export const coursePosts: CoursePost[] = [
     price: 69800,
     alt: "【出来高分析の決定版】VPA（Volume Price Analysis）",
     url: "https://www.paypal.com/ncp/payment/3ZLUXE7XXRNEG",
-    youtube: "https://www.youtube.com/embed/r4y7lKHlGko",
+    youtube: "https://www.youtube.com/embed/sdFYYsbjgWU",
     sections: [
       {
         title: "イントロダクション",
@@ -402,7 +402,7 @@ export const coursePosts: CoursePost[] = [
             _id: "va-1",
             title: "なぜ「出来高」を学ぶのか？",
             preview: true,
-            url: "https://www.youtube.com/embed/r4y7lKHlGko",
+            url: "https://www.youtube.com/embed/sdFYYsbjgWU",
             content: "",
           },
           {
