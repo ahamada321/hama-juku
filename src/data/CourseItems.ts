@@ -32,7 +32,7 @@ export const coursePosts: CoursePost[] = [
     slug: "ma",
     publishedDate: "June 20, 2025",
     title: "【本質から理解する】移動平均線（SMA／EMA）",
-    excerpt: "相場の流れを読み、自信を持って判断できる分析力を構築する",
+    excerpt: "相場の流れを読み、再現性のある売買判断を身につける",
     benefit: [
       "SMAやEMAなどの移動平均線の種類や特徴がわかる",
       "効きやすい移動平均線の期間や組み合わせ方がわかる",
