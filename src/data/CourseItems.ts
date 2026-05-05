@@ -251,7 +251,7 @@ export const coursePosts: CoursePost[] = [
               <p>フラクタル構造やテクニカル分析の基礎については、</p>
               <p>
                 <a href="/course/ta" class="font-semibold underline">
-                  最初の一歩を踏み出す！テクニカル分析入門
+                  本格的に学ぶ！テクニカル分析入門
                 </a>
               </p>
               <p>で詳しく解説していますので、ぜひあわせて受講してみてください。</p>`,
