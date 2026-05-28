@@ -44,7 +44,7 @@ export const coursePosts: CoursePost[] = [
     salePrice: 49800,
     price: 69800,
     alt: "【本質から理解する】移動平均線（SMA／EMA）完全攻略",
-    url: "https://www.paypal.com/ncp/payment/FEB8GSZYNBPTY",
+    url: "https://www.paypal.com/ncp/payment/T7TQZ26XY23PA",
     youtube: "https://www.youtube.com/embed/b3gKobHFVNw",
     sections: [
       {
@@ -392,7 +392,7 @@ export const coursePosts: CoursePost[] = [
     salePrice: 49800,
     price: 69800,
     alt: "【出来高分析の決定版】VPA（Volume Price Analysis）",
-    url: "https://www.paypal.com/ncp/payment/3ZLUXE7XXRNEG",
+    url: "https://www.paypal.com/ncp/payment/YY42LEMQJ9MHA",
     youtube: "https://www.youtube.com/embed/sdFYYsbjgWU",
     sections: [
       {
@@ -638,7 +638,7 @@ export const coursePosts: CoursePost[] = [
     salePrice: 49800,
     price: 69800,
     alt: "【相場の流れを読み解く】プライスアクション完全攻略",
-    url: "https://www.paypal.com/ncp/payment/WCXKQXNDYPNAA",
+    url: "https://www.paypal.com/ncp/payment/YL5JF5NVLCZ3W",
     youtube: "https://www.youtube.com/embed/bG-cEP19ZIY",
     sections: [
       {
