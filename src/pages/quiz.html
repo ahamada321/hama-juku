@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>トレード習熟度チェック | ハマ塾</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic",
+          sans-serif;
+        background: #f7f6f2;
+        color: #1a1a1a;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 1rem;
+      }
+      .card {
+        background: #fff;
+        border-radius: 16px;
+        padding: 2rem;
+        max-width: 560px;
+        width: 100%;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+      }
+      .brand {
+        font-size: 13px;
+        color: #888;
+        margin-bottom: 1.5rem;
+        letter-spacing: 0.05em;
+      }
+      .progress-bar {
+        height: 4px;
+        background: #e8e6e0;
+        border-radius: 2px;
+        margin-bottom: 1.75rem;
+      }
+      .progress-fill {
+        height: 100%;
+        background: #2d6a4f;
+        border-radius: 2px;
+        transition: width 0.35s ease;
+      }
+      .q-num {
+        font-size: 12px;
+        color: #aaa;
+        margin-bottom: 0.5rem;
+        letter-spacing: 0.05em;
+      }
+      .q-text {
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        color: #1a1a1a;
+      }
+      .choice {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 13px 16px;
+        margin-bottom: 8px;
+        background: #fff;
+        border: 1px solid #e0ded8;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 14px;
+        color: #2a2a2a;
+        transition:
+          border-color 0.15s,
+          background 0.15s;
+        line-height: 1.5;
+      }
+      .choice:hover {
+        border-color: #2d6a4f;
+        background: #f2f9f5;
+      }
+      .choice.selected {
+        border: 1.5px solid #2d6a4f;
+        background: #f2f9f5;
+        color: #1a4a35;
+        font-weight: 500;
+      }
+      .hidden {
+        display: none;
+      }
+      .result-badge {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 500;
+        padding: 4px 12px;
+        border-radius: 6px;
+        margin-bottom: 1rem;
+        letter-spacing: 0.05em;
+      }
+      .badge-a {
+        background: #d4edda;
+        color: #1a5c2e;
+      }
+      .badge-b {
+        background: #fde8d0;
+        color: #7a3500;
+      }
+      .badge-c {
+        background: #fef3cd;
+        color: #7a5200;
+      }
+      .result-title {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 0.75rem;
+        color: #1a1a1a;
+        line-height: 1.4;
+      }
+      .result-summary {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+      }
+      .locked-box {
+        background: #f7f6f2;
+        border: 1px dashed #c8c5be;
+        border-radius: 10px;
+        padding: 1.25rem 1.5rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+      }
+      .locked-label {
+        font-size: 11px;
+        color: #aaa;
+        letter-spacing: 0.05em;
+        margin-bottom: 0.5rem;
+      }
+      .locked-lines {
+      }
+      .locked-line {
+        height: 10px;
+        border-radius: 4px;
+        background: #e0ded8;
+        margin-bottom: 8px;
+      }
+      .lock-icon {
+        position: absolute;
+        top: 1.25rem;
+        right: 1.25rem;
+        font-size: 18px;
+        color: #bbb;
+      }
+      .locked-note {
+        font-size: 12px;
+        color: #aaa;
+        margin-top: 0.75rem;
+        text-align: center;
+      }
+      .score-bar-wrap {
+        margin-bottom: 1.5rem;
+      }
+      .score-bar-label {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        color: #aaa;
+        margin-bottom: 6px;
+      }
+      .score-bar-bg {
+        height: 6px;
+        background: #e8e6e0;
+        border-radius: 3px;
+      }
+      .score-bar-fill {
+        height: 100%;
+        background: #2d6a4f;
+        border-radius: 3px;
+        transition: width 0.5s ease;
+      }
+      .divider {
+        height: 1px;
+        background: #e8e6e0;
+        margin: 1.5rem 0;
+      }
+      .cta-label {
+        font-size: 12px;
+        color: #aaa;
+        margin-bottom: 0.75rem;
+        letter-spacing: 0.05em;
+      }
+      .cta-hint {
+        font-size: 13px;
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
+      .cta-btn {
+        display: block;
+        width: 100%;
+        padding: 14px 18px;
+        border-radius: 10px;
+        font-size: 15px;
+        font-weight: 500;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        margin-bottom: 10px;
+        transition: opacity 0.15s;
+      }
+      .cta-btn:hover {
+        opacity: 0.85;
+      }
+      .cta-primary {
+        background: #2d6a4f;
+        color: #fff;
+        border: none;
+      }
+      .cta-secondary {
+        background: #fff;
+        color: #2d6a4f;
+        border: 1px solid #2d6a4f;
+      }
+      .restart-btn {
+        display: block;
+        width: 100%;
+        margin-top: 0.5rem;
+        padding: 10px;
+        background: none;
+        border: none;
+        color: #aaa;
+        font-size: 13px;
+        cursor: pointer;
+        text-align: center;
+      }
+      .restart-btn:hover {
+        color: #555;
+      }
+      .fade-enter {
+        animation: fadeIn 0.25s ease;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(8px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="brand">ハマ塾 — トレード習熟度チェック</div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress" style="width: 20%"></div>
+      </div>
+      <div id="quiz-section"></div>
+      <div id="result-section" class="hidden"></div>
+    </div>
+
+    <script>
+      const questions = [
+        {
+          text: "直近1週間で、チャートを実際に検証した時間と動画・記事を見た時間、どちらが長いですか？",
+          choices: [
+            { text: "検証時間の方が長い", score: 3 },
+            { text: "同じくらい", score: 2 },
+            { text: "動画や記事を見る時間の方が長い", score: 1 },
+          ],
+        },
+        {
+          text: "今使っているトレード手法を、どのくらいの期間継続していますか？",
+          choices: [
+            { text: "6ヶ月以上、同じ手法を使い続けている", score: 3 },
+            { text: "3〜6ヶ月", score: 2 },
+            { text: "3ヶ月未満、またはよく変えている", score: 1 },
+          ],
+        },
+        {
+          text: "エントリーする前に、その理由を自分の言葉で説明できますか？",
+          choices: [
+            { text: "根拠を持って、いつでも説明できる", score: 3 },
+            { text: "なんとなく説明できる", score: 2 },
+            { text: "説明できないことが多い", score: 1 },
+          ],
+        },
+        {
+          text: "負けトレードの原因を、毎回言語化・記録していますか？",
+          choices: [
+            { text: "毎回記録して分析している", score: 3 },
+            { text: "たまにしている", score: 2 },
+            { text: "ほとんどしていない", score: 1 },
+          ],
+        },
+        {
+          text: "移動平均線が「なぜ機能するのか」を、根拠を持って説明できますか？",
+          choices: [
+            { text: "仕組みから理解して説明できる", score: 3 },
+            { text: "なんとなくわかる", score: 2 },
+            { text: "知識としては知っているが、説明できない", score: 1 },
+          ],
+        },
+      ];
+
+      const MAILMAG_URL = "https://hama-juku.pages.dev/information/";
+      const CONSULT_URL =
+        "https://docs.google.com/forms/d/e/1FAIpQLSfm3O2myAA6GZyl90rwAKovqqfL_LRnkcnuQdTZcY3xxSDPww/viewform";
+
+      let current = 0;
+      let scores = [];
+
+      function render() {
+        const q = questions[current];
+        document.getElementById("progress").style.width =
+          `${((current + 1) / 5) * 100}%`;
+        const qs = document.getElementById("quiz-section");
+        qs.innerHTML = `
+    <div class="q-num fade-enter">質問 ${current + 1} / 5</div>
+    <div class="q-text fade-enter">${q.text}</div>
+    <div id="choices" class="fade-enter"></div>
+  `;
+        q.choices.forEach((c, i) => {
+          const btn = document.createElement("button");
+          btn.className = "choice";
+          btn.textContent = c.text;
+          btn.onclick = () => selectChoice(i, c.score);
+          document.getElementById("choices").appendChild(btn);
+        });
+      }
+
+      function selectChoice(i, score) {
+        document.querySelectorAll(".choice").forEach((b, idx) => {
+          b.classList.toggle("selected", idx === i);
+          b.onclick = null;
+        });
+        scores[current] = score;
+        setTimeout(() => {
+          if (current < 4) {
+            current++;
+            render();
+          } else {
+            showResult();
+          }
+        }, 350);
+      }
+
+      function showResult() {
+        const total = scores.reduce((a, b) => a + b, 0);
+        const pct = Math.round(((total - 5) / 10) * 100);
+        let key = total >= 12 ? "A" : total >= 8 ? "B" : "C";
+
+        const data = {
+          A: {
+            badge: "badge-a",
+            label: "裾野を狭めるフェーズへ突入",
+            title: "裾野を狭めるフェーズ：判断軸は形成されつつあります",
+            summary:
+              "検証の習慣があり、学習の方向性は正しいです。ただし、ここからさらに成果を安定させるには「型の精度を上げる」ための具体的なアプローチが必要になります。",
+            hint: "あなたの現状に合った次のステップを、メルマガと無料相談でお伝えします。",
+          },
+          B: {
+            badge: "badge-b",
+            label: "最適な移行タイミングです",
+            title: "裾野を狭めるフェーズへの移行タイミングです",
+            summary:
+              "学習は続けられていますが、まだ「情報を集める段階」から抜け出しきれていません。このフェーズで必要なのは、新しい情報ではなく「絞り込む」という行動です。",
+            hint: "あなたが今すべき具体的な行動を、メルマガと無料相談でお伝えします。",
+          },
+          C: {
+            badge: "badge-c",
+            label: "裾野を広げるフェーズ",
+            title: "裾野を広げるフェーズ：まだ情報収集の段階にいます",
+            summary:
+              "これ自体は必要なプロセスですが、この状態が長く続くほど次のステップへ進みにくくなります。今の段階で意識すべきことが明確にあります。",
+            hint: "あなたの現在地から次に何をすべきか、無償相談で具体的にお伝えします。",
+          },
+        };
+        const r = data[key];
+
+        document.getElementById("progress").style.width = "100%";
+        document.getElementById("quiz-section").classList.add("hidden");
+        const rs = document.getElementById("result-section");
+        rs.classList.remove("hidden");
+        rs.innerHTML = `
+    <span class="result-badge ${r.badge} fade-enter">${r.label}</span>
+    <div class="result-title fade-enter">${r.title}</div>
+    <div class="score-bar-wrap fade-enter">
+      <div class="score-bar-label"><span>習熟度スコア</span><span>${pct}%</span></div>
+      <div class="score-bar-bg"><div class="score-bar-fill" style="width:0%" id="score-fill"></div></div>
+    </div>
+    <div class="result-summary fade-enter">${r.summary}</div>
+    <div class="locked-box fade-enter">
+      <div class="locked-label">あなたへの処方箋</div>
+      <div class="locked-lines">
+        <div class="locked-line" style="width:85%"></div>
+        <div class="locked-line" style="width:70%"></div>
+        <div class="locked-line" style="width:55%"></div>
+      </div>
+      <div class="lock-icon">🔒</div>
+      <div class="locked-note">無料相談で内容を受け取れます</div>
+    </div>
+    <div class="divider"></div>
+    <div class="cta-label">処方箋を受け取る</div>
+    <div class="cta-hint">${r.hint}</div>
+    <a href="${CONSULT_URL}" target="_blank" class="cta-btn cta-primary fade-enter">処方箋を受け取る（無料）</a>
+    <button class="restart-btn" onclick="restart()">もう一度診断する</button>
+  `;
+        setTimeout(() => {
+          const fill = document.getElementById("score-fill");
+          if (fill) fill.style.width = pct + "%";
+        }, 100);
+      }
+
+      function restart() {
+        current = 0;
+        scores = [];
+        document.getElementById("result-section").classList.add("hidden");
+        document.getElementById("quiz-section").classList.remove("hidden");
+        render();
+      }
+
+      render();
+    </script>
+  </body>
+</html>
