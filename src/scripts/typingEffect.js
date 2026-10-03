@@ -1,11 +1,10 @@
 const textElement = document.getElementById("typingtext");
 const cursorElement = document.getElementById("cursor");
 const words = [
-  "基礎コースを学ぶ",
-  "実践スキルを磨く",
-  "勝つための環境整備",
-  "投資マインドを育む",
-  "判断軸を構築する",
+  "①基礎コースを学ぶ",
+  "②添削を受ける",
+  "③認識ズレを正す",
+  "④判断軸を構築する",
 ];
 let wordIndex = 0;
 let charIndex = 0;
