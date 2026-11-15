@@ -3,7 +3,7 @@ import SecretLayout from '@src/layouts/SecretLayout.astro';
 
 // Import
 import HeadingPage from '@src/components/HeadingPage.astro';
-import ContactSection from '@components/ContactSection.astro';
+import MailingListForm from '@src/components/MailingListForm.astro';
 import ReviewsSection from '@components/ReviewsSection.astro';
 ---
 
@@ -11,8 +11,8 @@ import ReviewsSection from '@components/ReviewsSection.astro';
   <HeadingPage
     position='absolute',
     title="ハマ塾フル版 (完全版)"
-    description="新しい試みにつき、現在少人数制でサービスを提供しております。次回募集を再開する際は、優先的にご案内いたします。"
+    description="現在満席につき、公式メルマガ経由でご案内します"
   />
-  <ContactSection />
+  <MailingListForm />
   <ReviewsSection />
 </SecretLayout>
