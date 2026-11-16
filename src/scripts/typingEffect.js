@@ -1,7 +1,7 @@
 const textElement = document.getElementById("typingtext");
 const cursorElement = document.getElementById("cursor");
 const words = [
-  "①基礎コースを学ぶ",
+  "①基礎知識を学ぶ",
   "②添削を受ける",
   "③認識ズレを正す",
   "④判断軸を構築する",
