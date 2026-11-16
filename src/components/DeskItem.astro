@@ -239,7 +239,7 @@ const colorMap: ColorMap = {
   </div>
   <!-- Sketchbook with Pencil -->
   <div
-    class="absolute top-12 left-6 md:left-16 max-sm:hidden item-3d sketchbook-3d"
+    class="absolute top-32 left-6 md:left-20 max-sm:hidden item-3d sketchbook-3d"
     style="animation-delay: -4s;"
   >
     <div
@@ -268,30 +268,6 @@ const colorMap: ColorMap = {
         <div
           class="absolute right-3 w-2 h-2 bg-pink-300 rounded-full"
         ></div>
-      </div>
-    </div>
-  </div>
-  <!-- Pantone Color Guide -->
-  <div
-    class="absolute bottom-6 left-2 sm:left-20 item-3d pantone-3d max-sm:hidden"
-    style="animation-delay: -5s;"
-  >
-    <div
-      class="w-24 h-24 bg-white rounded-lg shadow-3d border border-gray-200 relative overflow-hidden"
-    >
-      <div class="bg-red-500 h-6 flex items-center justify-center">
-        <span class="text-white text-xs font-bold">Color Guide</span>
-      </div>
-      <div class="p-1 space-y-1">
-        {(['red', 'lime', 'green', 'blue', 'purple'] as (keyof typeof colorMap)[]).map(
-          (color) => (
-            <div class="grid grid-cols-8 gap-0.5">
-              {colorMap[color].map((colorClass: string) => (
-                <div class={`p-1 shadow-sm ${colorClass}`}></div>
-              ))}
-            </div>
-          ),
-        )}
       </div>
     </div>
   </div>
